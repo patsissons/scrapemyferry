@@ -2,16 +2,6 @@ import scrapeIt from 'scrape-it'
 import type { DailySchedule } from '../types'
 import { dailyScheduleUrl } from './urls'
 
-// export interface DailyScheduleSailing {
-//   depart: string
-//   arrive: string
-//   duration: string
-// }
-
-// export interface DailySchedule {
-//   sailings: DailyScheduleSailing[]
-// }
-
 interface DailyScheduleData {
   dailySchedule: {
     depart: string
@@ -44,9 +34,9 @@ export function dailySchedule(from: string, to: string, date?: string) {
 
   function transform({
     data: { dailySchedule },
-  }: scrapeIt.ScrapeResult<DailyScheduleData>) {
+  }: scrapeIt.ScrapeResult<DailyScheduleData>): DailySchedule {
     return {
       sailings: dailySchedule.filter(({ depart, arrive }) => depart && arrive),
-    } as DailySchedule
+    }
   }
 }

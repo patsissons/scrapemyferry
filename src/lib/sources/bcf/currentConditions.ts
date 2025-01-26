@@ -80,12 +80,12 @@ export function currentConditions(from: string, to: string) {
 
   function transform({
     data: { departures, ...data },
-  }: scrapeIt.ScrapeResult<CurrentConditions>) {
+  }: scrapeIt.ScrapeResult<CurrentConditions>): CurrentConditions {
     return {
       ...data,
       departures: departures.filter(
         ({ departure: { scheduled } }) => scheduled,
       ),
-    } as CurrentConditions
+    }
   }
 }

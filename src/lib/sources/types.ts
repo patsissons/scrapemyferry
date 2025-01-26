@@ -7,7 +7,8 @@ export interface Routes {
       to: {
         name: string
         code: string
-        url: string
+        urlPath: string
+        special?: boolean
       }[]
     }[]
   }[]
@@ -15,9 +16,11 @@ export interface Routes {
 
 export interface Sailing {
   time: string
-  totalSpace: string
-  standardSpace: string
-  mixedSpace: string
+  space: {
+    total: number
+    standard: number
+    mixed: number
+  }
 }
 
 export interface CurrentConditions {
@@ -57,7 +60,7 @@ export interface SeasonalScheduleSailing {
   depart: string
   arrive: string
   duration: string
-  messages: { message: string }[]
+  messages: string[]
 }
 
 export interface SeasonalSchedule {
@@ -67,7 +70,13 @@ export interface SeasonalSchedule {
   }[]
 }
 
+export interface SourceConfig {
+  tz: string
+  baseUrl: string
+}
+
 export interface Source {
+  config: SourceConfig
   currentConditions(from: string, to: string): Promise<CurrentConditions>
   dailySchedule(from: string, to: string, date?: string): Promise<DailySchedule>
   routes(): Promise<Routes>

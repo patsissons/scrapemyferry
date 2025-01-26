@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
-
-export const baseUrl = 'https://www.bcferries.com'
+import { baseUrl } from './config'
+import { parseTimestamp } from './utils'
 
 export function bcFerriesUrl(
   type: string,
@@ -34,25 +34,14 @@ export function availabilityUrl(
   departureTime: string,
 ) {
   return bcFerriesUrl('sailing-availability', '', {
-    departureTime: formatDepartureTime(departureTime),
+    departureTime: formatDepartureTime(),
     routeCode: [from, to].join('-'),
   })
 
-  function formatDepartureTime(time: string) {
-    return parseTime().format('YYYY-MM-DD HH:mm:ss').replace(' ', '%20')
-
-    function parseTime() {
-      let timestamp = dayjs(time)
-      if (timestamp.isValid()) return timestamp
-
-      timestamp = dayjs(time, 'HH:mm')
-      if (timestamp.isValid()) return timestamp
-
-      timestamp = dayjs(time, 'HH:mm:ss')
-      if (timestamp.isValid()) return timestamp
-
-      throw new Error(`Invalid departure time format: ${time}`)
-    }
+  function formatDepartureTime() {
+    return parseTimestamp(departureTime)
+      .format('YYYY-MM-DD HH:mm:ss')
+      .replace(' ', '%20')
   }
 }
 
@@ -71,10 +60,10 @@ export function dailyScheduleUrl(from: string, to: string, date?: string) {
     'routes-fares/schedules/daily',
     from,
     to,
-    formatDate(date),
+    formatDate(),
   )
 
-  function formatDate(date?: string) {
+  function formatDate() {
     if (!date) return
 
     const timestamp = dayjs(date)

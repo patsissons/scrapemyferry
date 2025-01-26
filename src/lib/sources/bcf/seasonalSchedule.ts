@@ -5,13 +5,13 @@ import { seasonalScheduleUrl } from './urls'
 interface SeasonalScheduleData {
   seasonalSchedule: {
     days: { day: string }[]
-    schedules: {
-      schedule: {
+    daySchedules: {
+      schedules: {
         depart: string
         arrive: string
         duration: string
         messages: { message: string }[]
-      }
+      }[]
     }[]
   }
 }
@@ -31,10 +31,10 @@ export function seasonalSchedule(from: string, to: string) {
             },
           },
         },
-        schedules: {
+        daySchedules: {
           listItem: 'tbody',
           data: {
-            schedule: {
+            schedules: {
               listItem: 'tr',
               data: {
                 depart: {
@@ -64,43 +64,27 @@ export function seasonalSchedule(from: string, to: string) {
 
   function transform({
     data: {
-      seasonalSchedule: { days, schedules },
+      seasonalSchedule: { days, daySchedules },
     },
-  }: scrapeIt.ScrapeResult<SeasonalScheduleData>) {
-    // return {
-    //   days: schedules
-    //   .filter(({depart, arrive}) => depart && arrive)
-    //   .map(({ schedule: {messages, ...sailing} }, index) => {
-    //     return {
-    //       day: days[index].day,
-    //       sailings: {
-    //         ...sailing,
-    //         messages,
-    //       }
-    //     }
-    //   }),
-    // } as SeasonalSchedule
-
+  }: scrapeIt.ScrapeResult<SeasonalScheduleData>): SeasonalSchedule {
     return {
-      days: [],
-    } as SeasonalSchedule
-
-    // const seasonalSchedule = data.seasonalSchedule.schedules.map(
-    //   (item, index) => {
-    //     return {
-    //       day: data.seasonalSchedule.days[index].day,
-    //       schedule: item.schedule
-    //         .filter((item) => item.depart && item.arrive)
-    //         .map(({ messages = [], ...row }) => {
-    //           return {
-    //             ...row,
-    //             messages: messages.filter(Boolean),
-    //           }
-    //         }),
-    //     }
-    //   },
-    // )
-
-    // return seasonalSchedule[0].schedule
+      days: daySchedules
+        .filter(
+          ({ schedules }) =>
+            schedules.length > 0 &&
+            schedules.some(({ depart, arrive }) => depart && arrive),
+        )
+        .map(({ schedules }, index) => ({
+          day: days[index].day,
+          sailings: schedules
+            .filter(({ depart, arrive }) => depart && arrive)
+            .map(({ messages, ...schedule }) => ({
+              ...schedule,
+              messages: messages
+                .filter(({ message }) => message?.trim())
+                .map(({ message }) => message.trim()),
+            })),
+        })),
+    }
   }
 }

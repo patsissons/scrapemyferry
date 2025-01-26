@@ -1,30 +1,40 @@
-import {
-  availability,
-  currentConditions,
-  dailySchedule,
-  seasonalSchedule,
-} from './lib'
+import { sourceForType } from './lib'
 
-const type = process.argv[2] || 'current'
-const from = process.argv[3] || 'HSB'
-const to = process.argv[4] || 'LNG'
+const sources = ['bcf'] as const
+type SourceType = (typeof sources)[number]
+
+const types = ['routes', 'sailing', 'current', 'daily', 'seasonal'] as const
+type CommandType = (typeof types)[number]
+
+const [
+  sourceType = 'bcf' as SourceType,
+  type = 'current' as CommandType,
+  from = 'HSB',
+  to = 'LNG',
+  timeArg = '',
+] = process.argv
+
+const source = sourceForType(sourceType)
 
 switch (type) {
-  case 'availability':
-    availability(from, to, process.argv[5]).then(console.log)
+  case 'routes':
+    source.routes().then(console.log)
+    break
+  case 'sailing':
+    source.sailing(from, to, timeArg).then(console.log)
     break
   case 'current':
-    currentConditions(from, to).then(console.log)
+    source.currentConditions(from, to).then(console.log)
     break
   case 'daily':
-    dailySchedule(from, to).then(console.log)
+    source.dailySchedule(from, to, timeArg).then(console.log)
     break
   case 'seasonal':
-    seasonalSchedule(from, to).then(console.log)
+    source.seasonalSchedule(from, to).then(console.log)
     break
   default:
     console.log(
-      'usage: scrapemyferry <current | seasonal | daily> <FROM> <TO> [...args]',
+      `usage: scrapemyferry <${types.join(' | ')}> <FROM> <TO> [DEPARTURE_TIME]`,
     )
     break
 }

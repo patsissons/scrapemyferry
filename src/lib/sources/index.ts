@@ -1,0 +1,1 @@
+export { sourceForType } from './source'

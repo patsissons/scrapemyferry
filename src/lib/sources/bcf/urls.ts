@@ -1,4 +1,6 @@
-const baseUrl = 'https://www.bcferries.com'
+import dayjs from 'dayjs'
+
+export const baseUrl = 'https://www.bcferries.com'
 
 export function bcFerriesUrl(
   type: string,
@@ -6,7 +8,11 @@ export function bcFerriesUrl(
   params?: Record<string, string>,
 ) {
   const url = [baseUrl, type, path].filter(Boolean).join('/')
-  return params ? `${url}?${new URLSearchParams(params).toString()}` : url
+  return params
+    ? `${url}?${Object.entries(params)
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&')}`
+    : url
 }
 
 export function bcFerriesRouteUrl(
@@ -28,9 +34,26 @@ export function availabilityUrl(
   departureTime: string,
 ) {
   return bcFerriesUrl('sailing-availability', '', {
-    departureTime,
+    departureTime: formatDepartureTime(departureTime),
     routeCode: [from, to].join('-'),
   })
+
+  function formatDepartureTime(time: string) {
+    return parseTime().format('YYYY-MM-DD HH:mm:ss').replace(' ', '%20')
+
+    function parseTime() {
+      let timestamp = dayjs(time)
+      if (timestamp.isValid()) return timestamp
+
+      timestamp = dayjs(time, 'HH:mm')
+      if (timestamp.isValid()) return timestamp
+
+      timestamp = dayjs(time, 'HH:mm:ss')
+      if (timestamp.isValid()) return timestamp
+
+      throw new Error(`Invalid departure time format: ${time}`)
+    }
+  }
 }
 
 export function currentConditionsUrl(from: string, to: string) {
@@ -54,12 +77,11 @@ export function dailyScheduleUrl(from: string, to: string, date?: string) {
   function formatDate(date?: string) {
     if (!date) return
 
+    const timestamp = dayjs(date)
+    if (!timestamp.isValid()) throw new Error(`Invalid date format: ${date}`)
+
     return {
-      scheduleDate: new Date(date).toLocaleDateString('en-US', {
-        month: '2-digit',
-        day: '2-digit',
-        year: 'numeric',
-      }),
+      scheduleDate: timestamp.format('MM/DD/YYYY'),
     }
   }
 }

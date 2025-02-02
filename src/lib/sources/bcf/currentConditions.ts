@@ -2,8 +2,16 @@ import scrapeIt from 'scrape-it'
 import type { CurrentConditions } from '../types'
 import { currentConditionsUrl } from './urls'
 
+type CurrentConditionsData = Omit<CurrentConditions, 'url' | 'nextSailing'> & {
+  nextSailing: {
+    scheduled: string
+    totalSpace: string
+  }
+}
+
 export function currentConditions(from: string, to: string) {
-  return scrapeIt<CurrentConditions>(currentConditionsUrl(from, to), {
+  const url = currentConditionsUrl(from, to)
+  return scrapeIt<CurrentConditionsData>(url, {
     lastUpdated: {
       selector: '#tabs-1 i.cc-last-update-text',
       convert: (text) =>
@@ -12,7 +20,24 @@ export function currentConditions(from: string, to: string) {
           .replace('Last updated:', '')
           .replace(/\n/g, ' ')
           .replace(/\s+/g, ' ')
-          .trim(),
+          .trim()
+          .toUpperCase(),
+    },
+    nextSailing: {
+      selector: '.current-condition-sailing-detail',
+      data: {
+        scheduled: {
+          selector: '.now-ticketing-departure-info p',
+          convert: (scheduled) => scheduled.toUpperCase(),
+        },
+        totalSpace: {
+          selector: '.now-ticketing-estimated-space-info > span',
+        },
+      },
+    },
+    trackingMap: {
+      selector: '#tabs-2 img',
+      attr: 'src',
     },
     departures: {
       listItem: '#tabs-1 table.detail-departure-table > tbody > tr',
@@ -24,11 +49,13 @@ export function currentConditions(from: string, to: string) {
             scheduled: {
               selector: 'p > span',
               eq: 0,
+              convert: (scheduled) => scheduled.toUpperCase(),
             },
             actual: {
               selector: 'p > span',
               eq: 1,
-              convert: (text) => text.replace('Departed', '').trim(),
+              convert: (text) =>
+                text.replace('Departed', '').trim().toUpperCase(),
             },
             vessel: {
               selector: 'p > a',
@@ -79,10 +106,15 @@ export function currentConditions(from: string, to: string) {
   }).then(transform)
 
   function transform({
-    data: { departures, ...data },
-  }: scrapeIt.ScrapeResult<CurrentConditions>): CurrentConditions {
+    data: { departures, nextSailing, ...data },
+  }: scrapeIt.ScrapeResult<CurrentConditionsData>): CurrentConditions {
     return {
+      url,
       ...data,
+      nextSailing: {
+        ...nextSailing,
+        totalSpace: parseInt(nextSailing.totalSpace.replace('%', '')) / 100,
+      },
       departures: departures.filter(
         ({ departure: { scheduled } }) => scheduled,
       ),

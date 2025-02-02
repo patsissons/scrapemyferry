@@ -7,26 +7,33 @@ interface DailyScheduleData {
     depart: string
     arrive: string
     duration: string
+    type: string
   }[]
 }
 
 export function dailySchedule(from: string, to: string, date?: string) {
-  return scrapeIt<DailyScheduleData>(dailyScheduleUrl(from, to, date), {
+  const url = dailyScheduleUrl(from, to, date)
+  return scrapeIt<DailyScheduleData>(url, {
     dailySchedule: {
       listItem: '#dailyScheduleTableOnward > tbody > tr',
       data: {
         depart: {
           selector: 'td',
           eq: 1,
-          attr: 'data-sort',
+          convert: (depart) => depart.toUpperCase(),
         },
         arrive: {
           selector: 'td',
           eq: 2,
+          convert: (arrive) => arrive.toUpperCase(),
         },
         duration: {
           selector: 'td',
           eq: 3,
+        },
+        type: {
+          selector: 'td',
+          eq: 4,
         },
       },
     },
@@ -36,6 +43,7 @@ export function dailySchedule(from: string, to: string, date?: string) {
     data: { dailySchedule },
   }: scrapeIt.ScrapeResult<DailyScheduleData>): DailySchedule {
     return {
+      url,
       sailings: dailySchedule.filter(({ depart, arrive }) => depart && arrive),
     }
   }

@@ -26,10 +26,11 @@ describe('Sailing', () => {
   it('returns routes from the route fares schedules page for the current date', async () => {
     const result = await scrape()
 
-    expect(axiosMock).toHaveBeenCalledWith(
-      `https://www.bcferries.com/sailing-availability?departureTime=${currentDate}%2014:10:00&routeCode=HSB-LNG`,
-    )
+    const url = `https://www.bcferries.com/sailing-availability?departureTime=${currentDate}%2014:10:00&routeCode=HSB-LNG`
+
+    expect(axiosMock).toHaveBeenCalledWith(url)
     expect(result).toStrictEqual({
+      url,
       time: dayjs(
         `${currentDate} 14:23:00`,
         'YYYY-MM-DD HH:mm:ss',
@@ -45,10 +46,11 @@ describe('Sailing', () => {
   it('sets the correct timestamp based on the provided time', async () => {
     const result = await scrape({ time: '2:10pm', date: '2025-01-01' })
 
-    expect(axiosMock).toHaveBeenCalledWith(
-      `https://www.bcferries.com/sailing-availability?departureTime=2025-01-01%2014:10:00&routeCode=HSB-LNG`,
-    )
+    const url = `https://www.bcferries.com/sailing-availability?departureTime=2025-01-01%2014:10:00&routeCode=HSB-LNG`
+
+    expect(axiosMock).toHaveBeenCalledWith(url)
     expect(result).toStrictEqual({
+      url,
       time: dayjs('2025-01-01 14:23:00', 'YYYY-MM-DD HH:mm:ss').toISOString(),
       space: {
         total: 0.2,

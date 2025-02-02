@@ -17,10 +17,11 @@ describe('Routes', () => {
   it('returns routes from the route fares schedules page', async () => {
     const result = await scrape()
 
-    expect(axiosMock).toHaveBeenCalledWith(
-      'https://www.bcferries.com/routes-fares/schedules',
-    )
+    const url = 'https://www.bcferries.com/routes-fares/schedules'
+
+    expect(axiosMock).toHaveBeenCalledWith(url)
     expect(result).toStrictEqual({
+      url,
       regions: [
         {
           name: 'Metro Vancouver',

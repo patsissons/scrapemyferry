@@ -2,6 +2,8 @@ import dayjs from 'dayjs'
 import { baseUrl } from './config'
 import { parseTimestamp } from './utils'
 
+export { baseUrl }
+
 export function bcFerriesUrl(
   type: string,
   path: string,

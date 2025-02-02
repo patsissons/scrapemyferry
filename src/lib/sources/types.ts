@@ -1,4 +1,5 @@
 export interface Routes {
+  url: string
   regions: {
     name: string
     from: {
@@ -15,7 +16,9 @@ export interface Routes {
 }
 
 export interface Sailing {
+  url: string
   time: string
+  // space numbers are a percentage of available space
   space: {
     total: number
     standard: number
@@ -24,7 +27,14 @@ export interface Sailing {
 }
 
 export interface CurrentConditions {
+  url: string
   lastUpdated: string
+  nextSailing: {
+    scheduled: string
+    // total space is a percentage of available space
+    totalSpace: number
+  }
+  trackingMap: string
   departures: {
     departure: {
       scheduled: string
@@ -50,9 +60,11 @@ export interface DailyScheduleSailing {
   depart: string
   arrive: string
   duration: string
+  type: string
 }
 
 export interface DailySchedule {
+  url: string
   sailings: DailyScheduleSailing[]
 }
 
@@ -64,9 +76,32 @@ export interface SeasonalScheduleSailing {
 }
 
 export interface SeasonalSchedule {
+  url: string
   days: {
     day: string
     sailings: SeasonalScheduleSailing[]
+  }[]
+}
+
+export interface Departures {
+  url: string
+  name: string
+  terminals: {
+    name: string
+    duration: string
+    departures: {
+      times: {
+        scheduled: string
+        actual: string
+        arrival: string
+        arrivalIsEta?: boolean
+      }
+      vessel: {
+        name: string
+        url: string
+      }
+      status?: string
+    }[]
   }[]
 }
 
@@ -79,6 +114,7 @@ export interface Source {
   config: SourceConfig
   currentConditions(from: string, to: string): Promise<CurrentConditions>
   dailySchedule(from: string, to: string, date?: string): Promise<DailySchedule>
+  departures(from: string): Promise<Departures>
   routes(): Promise<Routes>
   sailing(from: string, to: string, departureTime: string): Promise<Sailing>
   seasonalSchedule(from: string, to: string): Promise<SeasonalSchedule>

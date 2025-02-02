@@ -17,7 +17,8 @@ interface SeasonalScheduleData {
 }
 
 export function seasonalSchedule(from: string, to: string) {
-  return scrapeIt<SeasonalScheduleData>(seasonalScheduleUrl(from, to), {
+  const url = seasonalScheduleUrl(from, to)
+  return scrapeIt<SeasonalScheduleData>(url, {
     seasonalSchedule: {
       selector: '#seasonalSchedulesForm table.table-seasonal-schedule',
       eq: 0,
@@ -40,10 +41,12 @@ export function seasonalSchedule(from: string, to: string) {
                 depart: {
                   selector: 'td > span',
                   eq: 0,
+                  convert: (depart) => depart.toUpperCase(),
                 },
                 arrive: {
                   selector: 'td',
                   eq: 2,
+                  convert: (arrive) => arrive.toUpperCase(),
                 },
                 duration: {
                   selector: 'td',
@@ -68,6 +71,7 @@ export function seasonalSchedule(from: string, to: string) {
     },
   }: scrapeIt.ScrapeResult<SeasonalScheduleData>): SeasonalSchedule {
     return {
+      url,
       days: daySchedules
         .filter(
           ({ schedules }) =>

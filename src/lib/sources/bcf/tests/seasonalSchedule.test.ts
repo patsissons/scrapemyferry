@@ -24,10 +24,12 @@ describe('Seasonal Schedule', () => {
   it('returns the seasonal schedule for the provided route', async () => {
     const result = await scrape()
 
-    expect(axiosMock).toHaveBeenCalledWith(
-      'https://www.bcferries.com/routes-fares/schedules/seasonal/HSB-LNG',
-    )
+    const url =
+      'https://www.bcferries.com/routes-fares/schedules/seasonal/HSB-LNG'
+
+    expect(axiosMock).toHaveBeenCalledWith(url)
     expect(result).toStrictEqual({
+      url,
       days: [
         {
           day: 'MONDAY',

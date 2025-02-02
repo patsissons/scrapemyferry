@@ -18,7 +18,8 @@ interface RoutesData {
 }
 
 export function routes() {
-  return scrapeIt<RoutesData>(routesUrl(), {
+  const url = routesUrl()
+  return scrapeIt<RoutesData>(url, {
     regionNames: {
       listItem: '#schedulesList header > span',
     },
@@ -55,6 +56,7 @@ export function routes() {
     data: { regionNames, regions },
   }: scrapeIt.ScrapeResult<RoutesData>): Routes {
     return {
+      url,
       regions: regions
         .filter(({ from }) => from.length > 0)
         .map(({ from }, i) => ({

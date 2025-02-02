@@ -21,33 +21,31 @@ export function sailing(
   departureDate?: string,
 ) {
   const departTimestamp = buildTimestamp(departureTime, departureDate)
+  const url = availabilityUrl(from, to, departTimestamp.toISOString())
 
-  return scrapeIt<SailingData>(
-    availabilityUrl(from, to, departTimestamp.toISOString()),
-    {
-      body: {
-        selector: '.modal-body',
-        data: {
-          time: {
-            selector: '.modal-time > span',
-            eq: 0,
-          },
-          totalSpace: {
-            selector: '.standard-vehicle-space > p > span',
-            eq: 0,
-          },
-          standardSpace: {
-            selector: '.standard-vehicle-space > p > span',
-            eq: 2,
-          },
-          mixedSpace: {
-            selector: '.mixed-vehicle-space > p > span',
-            eq: 1,
-          },
+  return scrapeIt<SailingData>(url, {
+    body: {
+      selector: '.modal-body',
+      data: {
+        time: {
+          selector: '.modal-time > span',
+          eq: 0,
+        },
+        totalSpace: {
+          selector: '.standard-vehicle-space > p > span',
+          eq: 0,
+        },
+        standardSpace: {
+          selector: '.standard-vehicle-space > p > span',
+          eq: 2,
+        },
+        mixedSpace: {
+          selector: '.mixed-vehicle-space > p > span',
+          eq: 1,
         },
       },
     },
-  ).then(transform)
+  }).then(transform)
 
   function transform({
     data: {
@@ -70,6 +68,7 @@ export function sailing(
       .toISOString()
 
     return {
+      url,
       time: isotime,
       space: {
         total,

@@ -23,3 +23,7 @@ node -e "path = '/routes-fares/schedules/daily/HSB-LNG'; fixture = 'src/lib/sour
 # seasonal-schedule
 echo "fetching /routes-fares/schedules/seasonal/HSB-LNG ..."
 node -e "path = '/routes-fares/schedules/seasonal/HSB-LNG'; fixture = 'src/lib/sources/bcf/tests/fixtures/routes-fares/schedules/seasonal'; require('axios')('https://www.bcferries.com' + path).then(res => {require('fs').writeFileSync(fixture + '.json', JSON.stringify(res.data)); require('fs').writeFileSync(fixture + '.html', res.data)})"
+
+# departures
+echo "fetching /current-conditions/departures?terminalCode=HSB ..."
+node -e "path = '/current-conditions/departures?terminalCode=HSB'; fixture = 'src/lib/sources/bcf/tests/fixtures/current-conditions/departures'; require('axios')('https://www.bcferries.com' + path).then(res => {require('fs').writeFileSync(fixture + '.json', JSON.stringify(res.data)); require('fs').writeFileSync(fixture + '.html', res.data)})"

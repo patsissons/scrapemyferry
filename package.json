@@ -1,14 +1,16 @@
 {
   "name": "scrapemyferry",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.5",
+  "description": "Scapes your ferry data.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "scrapemyferry": "./bin/scrapemyferry.js"
+    "scrapemyferry": "bin/scrapemyferry.js"
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
+    "npm:publish": "pnpm clean && pnpm build && npm publish",
     "dev": "tsx src/cli.ts",
     "start": "node dist/cli.js",
     "test": "jest",

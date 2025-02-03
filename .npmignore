@@ -1,0 +1,9 @@
+/.vscode
+/scripts
+/src
+.gitignore
+.prettierrc
+.tool-versions
+jest.config.js
+pnpm-lock.yaml
+tsconfig.json

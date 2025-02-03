@@ -1,3 +1,3 @@
 import './setup'
 
-export { sourceForType } from './sources'
+export * from './sources'

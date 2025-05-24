@@ -1,6 +1,7 @@
 import scrapeIt from 'scrape-it'
 import type { CurrentConditions } from '../types'
 import { currentConditionsUrl } from './urls'
+import { parsePercentage } from './utils'
 
 type CurrentConditionsData = Omit<CurrentConditions, 'url' | 'nextSailing'> & {
   nextSailing: {
@@ -113,7 +114,7 @@ export function currentConditions(from: string, to: string) {
       ...data,
       nextSailing: {
         ...nextSailing,
-        totalSpace: parseInt(nextSailing.totalSpace.replace('%', '')) / 100,
+        totalSpace: parsePercentage(nextSailing.totalSpace),
       },
       departures: departures.filter(
         ({ departure: { scheduled } }) => scheduled,

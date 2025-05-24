@@ -1,4 +1,5 @@
 export { currentConditions } from './currentConditions'
+export { currentConditionsBeta } from './currentConditionsBeta'
 export { dailySchedule } from './dailySchedule'
 export { departures } from './departures'
 export { routes } from './routes'

@@ -3,7 +3,14 @@ import { sourceForType } from './lib'
 const sources = ['bcf'] as const
 type SourceType = (typeof sources)[number]
 
-const commands = ['routes', 'sailing', 'current', 'daily', 'seasonal'] as const
+const commands = [
+  'routes',
+  'sailing',
+  'current',
+  'current-beta',
+  'daily',
+  'seasonal',
+] as const
 type CommandType = (typeof commands)[number]
 
 const args = process.argv.slice(2)
@@ -39,6 +46,11 @@ function help() {
         console.log('list current conditions and schedule for a route')
         console.log(`usage: scrapemyferry <source> current <FROM> <TO>`)
         console.log(`e.g.,: scrapemyferry bcf current HSB LNG`)
+        break
+      case 'current-beta':
+        console.log('list current conditions and schedule for a route (BETA)')
+        console.log(`usage: scrapemyferry <source> current-beta <FROM> <TO>`)
+        console.log(`e.g.,: scrapemyferry bcf current-beta HSB LNG`)
         break
       case 'daily':
         console.log('list daily schedule for a route')
@@ -104,6 +116,9 @@ switch (type) {
     break
   case 'current':
     source.currentConditions(from, to).then(console.log)
+    break
+  case 'current-beta':
+    source.currentConditionsBeta(from, to).then(console.log)
     break
   case 'daily':
     source.dailySchedule(from, to, timeArg).then(console.log)

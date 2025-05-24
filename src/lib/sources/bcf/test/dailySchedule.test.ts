@@ -1,4 +1,3 @@
-import dayjs from 'dayjs'
 import { dailySchedule } from '../dailySchedule'
 import fixture from './fixtures/routes-fares/schedules/daily.json'
 

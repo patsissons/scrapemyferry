@@ -41,14 +41,16 @@ export function availabilityUrl(
   })
 
   function formatDepartureTime() {
-    return parseTimestamp(departureTime)
-      .format('YYYY-MM-DD HH:mm:ss')
-      .replace(' ', '%20')
+    return parseTimestamp(departureTime + ':00.000').replace(' ', '%20') + ':00'
   }
 }
 
 export function currentConditionsUrl(from: string, to: string) {
   return bcFerriesRouteUrl('current-conditions', from, to)
+}
+
+export function currentConditionsBetaUrl(from: string, to: string) {
+  return bcFerriesRouteUrl('current-conditions-beta', from, to)
 }
 
 export function departuresUrl(from: string) {

@@ -1,0 +1,3274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+
+<meta id="source-defence-account-id" data-value="text.source.defence.account.id">
+<meta id="source-defence-site-id" data-value="text.source.defence.site.id">
+
+<script type="text/javascript">
+    function loadViceScript() {
+        var currentPath = window.location.pathname;
+        var accountId = document.querySelector('meta#source-defence-account-id').getAttribute('data-value');
+        var siteId = document.querySelector('meta#source-defence-site-id').getAttribute('data-value');
+
+        if (accountId && siteId && currentPath.includes('checkout')) {
+            window.vice = {
+                config: {
+                    viceAccountId: ''+accountId,
+                    viceSiteId: ''+siteId
+                }
+            };
+            var viceLoaderScript = document.createElement('script');
+            viceLoaderScript.src = '//vice-prod.sdiapi.com/vice_loader/'+accountId+'/'+siteId;
+            document.head.appendChild(viceLoaderScript);
+        }
+    }
+    loadViceScript();
+</script>
+<!-- Matomo header -->
+<script type="text/javascript">
+    function isIE(){ua=navigator.userAgent; var is_ie=ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1; return is_ie;}if(window.location.origin.toLowerCase().indexOf("e.")===-1){if (!isIE()){var _mtm=_mtm || [];_mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://mtm.bcferries.com/js/container_hLWMAkCe.js'; s.parentNode.insertBefore(g,s);}else{window.location.replace("https://mtm.bcferries.com/_msg/update-your-browser/");}}
+</script>
+<!-- End Matomo header -->
+<title>
+		Current Conditions Beta Page</title>
+
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<meta name="description">
+<meta name="robots" content="index,follow">
+
+
+
+
+
+
+
+ <link rel="canonical" href="https://www.bcferries.com/current-conditions-beta/HSB-LNG" />
+ <meta name="viewport" content="width=device-width">
+ <meta name="title" content="Current Conditions Beta Page">
+ 
+     
+ 
+<link rel="shortcut icon" type="image/x-icon" media="all" href="/_ui/responsive/theme-alpha/images/favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/animate.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/custom-components-ui.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/owl.carousel.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/owl.theme.default.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/fontawesome-all.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/flaticon.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/bootstrap-select.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/dataTables.bootstrap.min.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/stylesheet.min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/_ui/responsive/theme-bcf/css/font.css" />
+<link rel="icon" href="/_ui/responsive/theme-bcf/images/favicon.ico" type="image/ico" sizes="16x16">
+
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/addons/bcfassistedservicesstorefront/responsive/common/css/bcfassistedservicesstorefront.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/addons/bcfassistedservicesstorefront/responsive/common/css/storeFinder.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/_ui/addons/smarteditaddon/responsive/common/css/smarteditaddon.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="page-currentconditionsbetapage pageType-ContentPage template-pages-addon--bcfstorefrontaddon-pages-layout-transactionPageTemplate2 pageLabel--current-conditions-beta smartedit-page-uid-currentconditionsbetapage smartedit-page-uuid-eyJpdGVtSWQiOiJjdXJyZW50Y29uZGl0aW9uc2JldGFwYWdlIiwiY2F0YWxvZ0lkIjoidHJhbnNhY3Rpb25hbENvbnRlbnRDYXRhbG9nIiwiY2F0YWxvZ1ZlcnNpb24iOiJPbmxpbmUifQ== smartedit-catalog-version-uuid-transactionalContentCatalog/Online  language-en">
+    <matomo:matomoBody/>
+    <div id="currentPage" class="hidden">currentconditionsbetapage</div>
+	<main class="page-margin"
+			data-currency-iso-code="CAD">
+			<section class="yCmsContentSlot">
+<header class="header-region">
+    <nav class="navbar navbar-default navbar-static-top menu-mega-ui" id="js_navbar_menu">
+        <div class="container">
+            <div class="navbar-header ">
+                <div class="col-xs-4 col-md-2 text-left hidden-lg">
+                        <a class="navbar-toggle" data-toggle="collapse"
+                           data-target=".js-navbar-collapse"> <span class="sr-only">Toggle
+                            navigation</span>
+                            <span class="icon-bar"></span> <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="mobile-menu-link">Menu</span>
+                        </a>
+                        <div class="close-menu responsive-adjustment">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                <div class="col-xs-4 col-sm-6 col-md-2 col-lg-12 buffer-left-none buffer-right-none text-center">
+                    <a class="navbar-brand" href="/"><img title="Home"
+				alt="Home" src="https://www.bcferries.com/web_image/images/hfc/h82/8821728313374.png"></a>
+		</div>
+                <div class="col-xs-4 col-sm-2 hidden-md hidden-lg">
+                        <a class="text-center myAcount-data"
+                           href="/my-account"> <span
+                                class="sr-only">Toggle navigation</span> <span
+                                class="bcf bcf-icon-account header-login-icon"></span>
+                            <span class="mobile-login-user-link">
+                            <a href="/login" class="mobile-menu-link" >Login</a></span>
+                        </a>
+                    </div>
+                <div class="hidden-xs hidden-sm col-md-8 hidden-lg">
+                    <ul
+                            class="collapse-sailling link-none sec-nav fnt-14 sec-nav-tablet">
+                        <li><a href="/current-conditions/service-notices" class="mobile-menu-link" >Service notices&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                    <li><a href="/routes-fares/schedules" class="mobile-menu-link" >Schedules&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                    <li><a href="/RouteSelectionPage" class="mobile-menu-link" >Book now&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                    <li><a href="/login" class="mobile-menu-link" >Login</a></li>
+                                    <li class="dropdown top-dropdown-menu">
+                                            <div>
+                                                <a href="#"
+                                                   class="dropdown-toggle current-conditions full-width-mobile display-inline mobile-menu-link"
+                                                   type="button " data-toggle="dropdown">Current conditions&nbsp;
+                                                    <span class="down-a display-none-desktop cc-menu-arrow-adjust-mobile">
+                                                    <span class="bcf bcf-icon-down-arrow"></span>
+                                                 </span>
+                                                    <span class="bcf bcf-icon-down-arrow display-none-mobile"></span>
+                                                </a>
+                                                <ul class="dropdown-menu current-conditions-dropdown">
+                                                    <li>
+                                                                <a href="/current-conditions" class="mobile-menu-link text-align-left p-15-desktop">Conditions by route&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                        <li>
+                                                                <a href="/current-conditions/departures" class="mobile-menu-link text-align-left p-15-desktop">Departures & arrivals&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                        <li>
+                                                                <a href="/current-conditions/busy-terminals" class="mobile-menu-link text-align-left p-15-desktop">Major terminal status&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                        <li>
+                                                                <a href="/current-conditions/webcams" class="mobile-menu-link text-align-left p-15-desktop">Terminal webcams&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                        <li>
+                                                                <a href="/current-conditions/vessel-tracking-positions" class="mobile-menu-link border-none text-align-left p-15-desktop">Ferry tracking&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                        </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="collapse-sailling link-none sec-nav fnt-14 hidden-md ">
+                    <li>
+                                                <a href="/current-conditions/service-notices" class="mobile-menu-link" >Service notices&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                        <li>
+                                                <a href="/routes-fares/schedules" class="mobile-menu-link" >Schedules&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                        <li>
+                                                <a href="/RouteSelectionPage" class="mobile-menu-link" >Book now&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                        <li>
+                                                <a href="/login" class="mobile-menu-link" >Login</a></li>
+                                        <li class="dropdown top-dropdown-menu">
+                                                <div>
+                                                    <a href="#"
+                                                       class="dropdown-toggle current-conditions full-width-mobile display-inline mobile-menu-link"
+                                                       type="button " data-toggle="dropdown">Current conditions&nbsp;
+                                                        <span class="down-a display-none-desktop cc-menu-arrow-adjust-mobile">
+                                                    <span class="bcf bcf-icon-down-arrow"></span>
+                                                 </span>
+                                                        <span class="bcf bcf-icon-down-arrow display-none-mobile"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu current-conditions-dropdown">
+                                                        <li>
+                                                                    <a href="/current-conditions" class="mobile-menu-link text-align-left p-15-desktop">Conditions by route&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                            <li>
+                                                                    <a href="/current-conditions/departures" class="mobile-menu-link text-align-left p-15-desktop">Departures & arrivals&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                            <li>
+                                                                    <a href="/current-conditions/busy-terminals" class="mobile-menu-link text-align-left p-15-desktop">Major terminal status&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                            <li>
+                                                                    <a href="/current-conditions/webcams" class="mobile-menu-link text-align-left p-15-desktop">Terminal webcams&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                            <li>
+                                                                    <a href="/current-conditions/vessel-tracking-positions" class="mobile-menu-link border-none text-align-left p-15-desktop">Ferry tracking&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                            </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                <ul class="nav navbar-nav navbar-right mob-navigation ">
+                    <li
+                                    class="dropdown mega-dropdown dropdown-masked menu-1">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Routes & fares<span class="down-a"> <i
+                                        class="bcf bcf-icon-down-arrow" aria-hidden="true"></i>
+								</span>
+                                </a>
+                                <ul class="dropdown-menu mega-dropdown-menu"
+                                    data-panel='menu-1'>
+                                    <li>
+                                        <ul class="container list-unstyled m-auto">
+                                            <li class="col-sm-4 padding-left-0 icon-manage navigator">
+                                                <h2>Routes & fares</h2>
+                                                <p><p>Fare choices are available on routes between Metro Vancouver and Vancouver Island to provide more value, choice and certainty.</p>
+</p> <div class="navigation-mob-link-n">
+                                                    <a href="/newfares" >Learn more&nbsp;<i class="fa fa-angle-right"></i></a></div>
+                                            </li>
+
+                                            <li class="col-sm-3 nav-value padding-0 navigator">
+                                                <ul>
+                                                    <li class="navigator deals-menu"><a href="/routes-fares/discover-route-map" >Routes</a></li>
+                                                        <li class="navigator deals-menu"><a href="/routes-fares/ferry-fares" >Fare & fee information</a></li>
+                                                        <li class="navigator deals-menu"><a href="/newfares" >Fare choices</a></li>
+                                                        <li class="navigator deals-menu"><a href="/routes-fares/ferry-fares/experience-card" >Experience Card</a></li>
+                                                        <li class="navigator deals-menu"><a href="https://www.bcferries.com/routes-fares/ferry-fares/assured-loading-card" >Assured Loading Card</a></li>
+                                                        <li class="navigator deals-menu"><a href="/routes-fares/fare-calculator" >Fare calculator</a></li>
+                                                        <li class="navigator deals-menu"><a href="/routes-fares/travel-gift-certificates" >Gift certificates</a></li>
+                                                        <li class="navigator deals-menu"><a href="/routes-fares/schedules" >Schedules</a></li>
+                                                        </ul>
+                                            </li>
+                                            <li class="col-sm-5 padding-right-0 mob-img-box">
+                                                <ul>
+                                                    <li>
+                                                        <div class="menu-image-box navigator">
+                                                            <a href=""> <img class='img-fluid js-responsive-image'
+                                                                     alt='BC Ferries vessels sailing past each other'
+                                                                     title='BC Ferries vessels sailing past each other'
+                                                                     data-media='{"1":"https://www.bcferries.com/web_image/h71/h12/8851775356958.jpg"}'/>
+                                                            </a>
+                                                            <div class="navigation-img">
+                                                                <p class="text-dark-blue"><p><font color="#003366"><b>Travel tips</b></font></p>
+</p>
+                                                                <p class="m-0">
+                                                                    <b><a href="https://www.bcferries.com/travel-boarding/travel-tips" >Learn more&nbsp;<i class="fa fa-angle-right"></i></a></b>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        <li
+                                    class="dropdown mega-dropdown dropdown-masked menu-2">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Book sailings<span class="down-a"> <i
+                                        class="bcf bcf-icon-down-arrow" aria-hidden="true"></i>
+								</span>
+                                </a>
+                                <ul class="dropdown-menu mega-dropdown-menu"
+                                    data-panel='menu-2'>
+                                    <li>
+                                        <ul class="container list-unstyled m-auto">
+                                            <li class="col-sm-4 padding-left-0 icon-manage navigator">
+                                                <h2>Book sailings</h2>
+                                                <p>Information to help plan and make personal, group, commercial, and travel agent bookings.</p> <div class="navigation-mob-link-n">
+                                                    <a href="/book-sailings" >Find out more&nbsp;<i class="fa fa-angle-right"></i></a></div>
+                                            </li>
+
+                                            <li class="col-sm-3 nav-value padding-0 navigator">
+                                                <ul>
+                                                    <li class="navigator deals-menu"><a href="/RouteSelectionPage" >Book now</a></li>
+                                                        <li class="navigator deals-menu"><a href="/book-sailings/personal-travel" >Personal</a></li>
+                                                        <li class="navigator deals-menu"><a href="/book-sailings/business-account-commercial-travel-services" >Commercial </a></li>
+                                                        <li class="navigator deals-menu"><a href="/book-sailings/group-bookings" >Group </a></li>
+                                                        <li class="navigator deals-menu"><a href="/book-sailings/travel-agents-and-tour-operators" >Travel agents & tours</a></li>
+                                                        <li class="navigator deals-menu"><a href="/routes-fares/schedules" >Schedules</a></li>
+                                                        <li class="navigator deals-menu"><a href="/allocating-space-on-board" >Bookable deck space</a></li>
+                                                        </ul>
+                                            </li>
+                                            <li class="col-sm-5 padding-right-0 mob-img-box">
+                                                <ul>
+                                                    <li>
+                                                        <div class="menu-image-box navigator">
+                                                            <a href=""> <img class='img-fluid js-responsive-image'
+                                                                     alt='BC Ferries App'
+                                                                     title='BC Ferries App'
+                                                                     data-media='{"1":"https://www.bcferries.com/web_image/hdf/h28/8932230397982.jpg"}'/>
+                                                            </a>
+                                                            <div class="navigation-img">
+                                                                <p class="text-dark-blue"><p><font color="#003366"><b>Download the BC Ferries app</b></font></p>
+</p>
+                                                                <p class="m-0">
+                                                                    <b><a href="https://www.bcferries.com/app" >Learn more&nbsp;<i class="fa fa-angle-right"></i></a></b>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        <li
+                                    class="dropdown mega-dropdown dropdown-masked menu-3">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Travel & boarding<span class="down-a"> <i
+                                        class="bcf bcf-icon-down-arrow" aria-hidden="true"></i>
+								</span>
+                                </a>
+                                <ul class="dropdown-menu mega-dropdown-menu"
+                                    data-panel='menu-3'>
+                                    <li>
+                                        <ul class="container list-unstyled m-auto">
+                                            <li class="col-sm-4 padding-left-0 icon-manage navigator">
+                                                <h2>Travel & boarding</h2>
+                                                <p>Directions, transit options, and important check-in and boarding information for foot passengers and drivers.</p> <div class="navigation-mob-link-n">
+                                                    <a href="/travel-boarding" >Find out more&nbsp;<i class="fa fa-angle-right"></i></a></div>
+                                            </li>
+
+                                            <li class="col-sm-3 nav-value padding-0 navigator">
+                                                <ul>
+                                                    <li class="navigator deals-menu"><a href="/travel-boarding/travel-tips" >Travel tips</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/terminal-directions-parking-food" >Terminals</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/coach-bus-shuttle" >Public transportation, bus & coach</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/foot-passenger-check-in" >Foot passengers</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/cyclists" >Bicycles</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/travel-vehicle-car-truck" >Drivers</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/travel-with-pets" >Travelling with pets</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/baggage-luggage" >Boarding with luggage</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/livestock-transport" >Livestock</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/dangerous-goods" >Dangerous goods</a></li>
+                                                        <li class="navigator deals-menu"><a href="/accessibility" >Accessibility</a></li>
+                                                        </ul>
+                                            </li>
+                                            <li class="col-sm-5 padding-right-0 mob-img-box">
+                                                <ul>
+                                                    <li>
+                                                        <div class="menu-image-box navigator">
+                                                            <a href=""> <img class='img-fluid js-responsive-image'
+                                                                     alt='BC Ferries App'
+                                                                     title='BC Ferries App'
+                                                                     data-media='{"1":"https://www.bcferries.com/web_image/hdf/h28/8932230397982.jpg"}'/>
+                                                            </a>
+                                                            <div class="navigation-img">
+                                                                <p class="text-dark-blue"><font color="#003366"><b>Download the BC Ferries app</b></font></p>
+                                                                <p class="m-0">
+                                                                    <b><a href="https://www.bcferries.com/app" >Learn more&nbsp;<i class="fa fa-angle-right"></i></a></b>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        <li
+                                    class="dropdown mega-dropdown dropdown-masked menu-4">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        On the ferry<span class="down-a"> <i
+                                        class="bcf bcf-icon-down-arrow" aria-hidden="true"></i>
+								</span>
+                                </a>
+                                <ul class="dropdown-menu mega-dropdown-menu"
+                                    data-panel='menu-4'>
+                                    <li>
+                                        <ul class="container list-unstyled m-auto">
+                                            <li class="col-sm-4 padding-left-0 icon-manage navigator">
+                                                <h2>On the ferry</h2>
+                                                <p>Welcome aboard. Explore our fleet for information on safety, accessibility, dining, shopping, and more on our ferries.</p> <div class="navigation-mob-link-n">
+                                                    <a href="/on-the-ferry" >Find out more&nbsp;<i class="fa fa-angle-right"></i></a></div>
+                                            </li>
+
+                                            <li class="col-sm-3 nav-value padding-0 navigator">
+                                                <ul>
+                                                    <li class="navigator deals-menu"><a href="/on-the-ferry/our-fleet" >Fleet</a></li>
+                                                        <li class="navigator deals-menu"><a href="/on-the-ferry/eat-shop-relax" >Eat, shop & relax</a></li>
+                                                        </ul>
+                                            </li>
+                                            <li class="col-sm-5 padding-right-0 mob-img-box">
+                                                <ul>
+                                                    <li>
+                                                        <div class="menu-image-box navigator">
+                                                            <a href=""> <img class='img-fluid js-responsive-image'
+                                                                     alt='BC Ferries vessels sailing past each other'
+                                                                     title='BC Ferries vessels sailing past each other'
+                                                                     data-media='{"1":"https://www.bcferries.com/web_image/h71/h12/8851775356958.jpg"}'/>
+                                                            </a>
+                                                            <div class="navigation-img">
+                                                                <p class="text-dark-blue"><p><font color="#003366"><strong>Travel tips</strong></font></p>
+</p>
+                                                                <p class="m-0">
+                                                                    <b><a href="https://www.bcferries.com/travel-boarding/travel-tips" >Learn more&nbsp;<i class="fa fa-angle-right"></i></a></b>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        <li
+                                    class="dropdown mega-dropdown dropdown-masked menu-5">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Deals & offers<span class="down-a"> <i
+                                        class="bcf bcf-icon-down-arrow" aria-hidden="true"></i>
+								</span>
+                                </a>
+                                <ul class="dropdown-menu mega-dropdown-menu"
+                                    data-panel='menu-5'>
+                                    <li>
+                                        <ul class="container list-unstyled m-auto">
+                                            <li class="col-sm-4 padding-left-0 icon-manage navigator">
+                                                <h2>Deals & offers</h2>
+                                                <p><p>Take advantage of our latest onboard, sailing and promotions. We&#39;ve got the perfect deal for you.</p>
+</p> <div class="navigation-mob-link-n">
+                                                    <a href="/deals-special-offers" >Find out more&nbsp;<i class="fa fa-angle-right"></i></a></div>
+                                            </li>
+
+                                            <li class="col-sm-3 nav-value padding-0 navigator">
+                                                <ul>
+                                                    <li class="navigator deals-menu"><a href="/deals-special-offers/sailing-specials" >Sailing specials</a></li>
+                                                        <li class="navigator deals-menu"><a href="/deals-special-offers/onboard-offers" >See offers&nbsp;<i class="fa fa-angle-right"></i></a></li>
+                                                        <li class="navigator deals-menu"><a href="https://www.bcferries.com/routes-fares/travel-gift-certificates" >Gift certificates</a></li>
+                                                        <li class="navigator deals-menu"><a href="/deals-special-offers/onboard-enewsletter" >Sign up for offers</a></li>
+                                                        </ul>
+                                            </li>
+                                            <li class="col-sm-5 padding-right-0 mob-img-box">
+                                                <ul>
+                                                    <li>
+                                                        <div class="menu-image-box navigator">
+                                                            <a href=""> <img class='img-fluid js-responsive-image'
+                                                                     alt=''
+                                                                     title=''
+                                                                     data-media='{"1":"https://www.bcferries.com/web_image/hbc/h26/9039700721694.jpg"}'/>
+                                                            </a>
+                                                            <div class="navigation-img">
+                                                                <p class="text-dark-blue"><p><font color="#003366"><b>Cirque du Soleil CRYSTAL</b></font></p>
+
+<p><em>Cirque du Soleil CRYSTAL</em>&nbsp;is coming to Vancouver June 4-8.&nbsp;<strong>Save up to 20%</strong>&nbsp;by purchasing your tickets as a BC Ferries customer.</p>
+</p>
+                                                                <p class="m-0">
+                                                                    <b><a href="https://www.cirquedusoleil.com/crystal"  target="_blank">Learn more&nbsp;<i class="fa fa-angle-right"></i></a></b>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        <li
+                                    class="dropdown mega-dropdown dropdown-masked menu-6">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Trip planning & activities<span class="down-a"> <i
+                                        class="bcf bcf-icon-down-arrow" aria-hidden="true"></i>
+								</span>
+                                </a>
+                                <ul class="dropdown-menu mega-dropdown-menu"
+                                    data-panel='menu-6'>
+                                    <li>
+                                        <ul class="container list-unstyled m-auto">
+                                            <li class="col-sm-4 padding-left-0 icon-manage navigator">
+                                                <h2>Trip planning & activities</h2>
+                                                <p>BC is known for its diverse regions, from the vast wilderness of Northern BC, to the crystal-clear waters along the Sunshine Coast, to the outdoor playground of Vancouver Island. Find your next destination today.</p> <div class="navigation-mob-link-n">
+                                                    <a href="/trip-planning" >Go to trip planning&nbsp;<i class="fa fa-angle-right"></i></a></div>
+                                            </li>
+
+                                            <li class="col-sm-3 nav-value padding-0 navigator">
+                                                <ul>
+                                                    <li class="navigator deals-menu"><a href="/activities" >Book activities</a></li>
+                                                        <li class="navigator deals-menu"><a href="/trip-planning/events" >Events</a></li>
+                                                        <li class="navigator deals-menu"><a href="/travel-boarding/travel-tips" >Travel tips</a></li>
+                                                        <li class="navigator deals-menu"><a href="/trip-planning/sail-and-drive" >Sail & drive itineraries</a></li>
+                                                        <li class="navigator deals-menu"><a href="/trip-planning/places-to-visit" >Places to visit</a></li>
+                                                        <li class="navigator deals-menu"><a href="/places-to-stay" >Places to stay</a></li>
+                                                        <li class="navigator deals-menu"><a href="/trip-planning/indigenous-experiences" >Indigenous experiences</a></li>
+                                                        <li class="navigator deals-menu"><a href="/deals-special-offers" >Deals & Offers</a></li>
+                                                        </ul>
+                                            </li>
+                                            <li class="col-sm-5 padding-right-0 mob-img-box">
+                                                <ul>
+                                                    <li>
+                                                        <div class="menu-image-box navigator">
+                                                            <a href=""> <img class='img-fluid js-responsive-image'
+                                                                     alt=''
+                                                                     title=''
+                                                                     data-media='{"1":"https://www.bcferries.com/web_image/h34/hb5/9037529677854.jpg"}'/>
+                                                            </a>
+                                                            <div class="navigation-img">
+                                                                <p class="text-dark-blue"><p><font color="#003366"><b>Over-height Vehicle Savings</b></font></p>
+
+<p>Pack your RV or camper this summer and sail to Metro Vancouver or Vancouver Island for less with our Over-height vehicle Saver fare.</p>
+</p>
+                                                                <p class="m-0">
+                                                                    <b><a href="https://www.bcferries.com/routes-fares/ferry-fares/over-height-promotion" >View offers&nbsp;<i class="fa fa-angle-right"></i></a></b>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+            </div>
+        </div>
+        <!-- /.nav-collapse -->
+    </nav>
+</header>
+</section><section class="yCmsContentSlot">
+</section><section class="yCmsContentSlot">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
+			<div class="breadcrumb-section">
+					<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+            <li><a href="/current-conditions-beta-landing-page">Current conditions</a></li>
+            </ol>
+</div>
+			</div>
+	</div>
+</div>
+</section><section class="yCmsContentSlot">
+</section><div class="container">
+	<div class="modal fade" id="y_confirmFreshBookingModal" tabindex="-1" role="dialog" aria-labelledby="y_confirmFreshBookingModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+				<h4 class="modal-title" id="confirmFreshBookingLabel">
+					Confirm New Booking</h4>
+			</div>
+			<div class="modal-body">
+				
+				<h3>
+					Another booking already started</h3>
+				<p>
+					You have another booking already started. Confirm you want to clear it and continue with your new booking.</p>
+				
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 mb-3">
+						<button class="btn btn-primary btn-block y_freshBooking" >
+							Confirm</button>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<button class="btn btn-secondary btn-block" data-dismiss="modal">
+							No thanks</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<input type="hidden" name="cartTimerContinueUrl" id="cartTimerContinueUrl">
+
+  <form action="#" method="GET" id="cartTimerContinueUrlForm">
+  </form>
+
+   <div class="modal " id="y_showCartAboutToExpireModal" tabindex="-1" role="dialog" aria-labelledby="y_showCartAboutToExpireModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+				<h4 class="modal-title" id="cartAboutToExpireModal">
+					Important</h4>
+			</div>
+			<div class="modal-body">
+                <span id="cartTimerAboutToExpireMessage"></span><br/>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <button type="button" class="btn btn-transparent btn-block btn-cart-timer-continue" data-dismiss="modal">
+                                 Continue</button>
+                        </div>
+                    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal " id="y_showCartTimerExpired" tabindex="-1" role="dialog" aria-labelledby="y_showCartTimerExpired">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<h4 class="modal-title" id="cartTimerExpired">
+
+						Important</h4>
+			</div>
+
+			<div class="modal-body">
+                  Your session has expired. If you still want to book travel, select &quot;Search again&quot; below.<br/>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+
+                          <button class="btn btn-primary btn-block cartTimerContinueButton" type="button" id="cartTimerContinueButton">
+
+                            Search again</button>
+                          </div>
+                    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<section class="margin-top--I">
+		        <div class="container">
+		           <div class="row">
+		             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		               <div id="globalMessages">
+							</div>
+		             </div>
+		           </div>
+		        </div>
+				</section>
+				<section class="yCmsContentSlot">
+<script language="JavaScript">
+    setInterval('autoRefreshPage()', 300000);
+    function autoRefreshPage() {
+        window.location.reload();
+    }
+
+</script>
+<a href="https://www.surveymonkey.com/r/BCFerriesCCBetaSurvey" target="_blank" class="feedback-link">
+    <div class="feedback-button" id="feedback-button"><p>Feedback</p></div>
+</a>
+<p id="legendLabel1" class="d-none">Available vehicle&nbsp;space</p>
+<p id="legendLabel2" class="d-none">Reservations not checked-in</p>
+<p id="legendLabel3" class="d-none">All vehicles checked-in</p>
+
+<!-- START CC BETA HEADER COMPONENT -->
+<div class="cc-beta-top-view-menu">
+    <div class="dropdown cc-beta-mobile-dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            On this page<span class="bcf bcf-icon-down-arrow" style="float: right;"></span>
+        </button>
+        <ul class="dropdown-menu cc-beta-dropdown-menu-items" aria-labelledby="dropdownMenu1">
+            <li><a href="#sailing-status">Sailing status</a></li>
+            <li><a href="#cc-beta-webcams-section">Terminal cameras</a></li>
+            <li><a href="#cc-beta-ferry-tracking-section">Ferry tracking</a></li>
+            <li><a href="#terminal-info">Terminal info &amp; parking</a></li>
+            <li><a href="#other-resources">Other resources</a></li>
+            <hr style="margin-top: 10px;margin-bottom: 0px; width: 93%;">
+                <li>
+                    <a href="#">
+                        <span class="popup" data-toggle="modal" data-target="#serviceNoticesModal">
+                            <span class="bcf bcf-icon-notice bcf-vertical-middle bcf-icon-sm bcf-bule-icon" style="width:35px"></span>
+                            View service notices</span>
+                    </a>
+                </li>
+            </ul>
+    </div>
+</div>
+<div class="cc-beta-header section1">
+    <div class="container-fluid">
+        <div class="container">
+            <h2 class="text-dark-blue ccdetails-main-title">
+                <style type="text/css">.feedback-button {display: none;}
+</style>
+<p>Current conditions</h2>
+            <i class="cc-last-update-text">
+                Last Updated:<span style="padding-left:5px;">11:27 AM</span>
+                </i>
+            <a href="#" onclick="window.location.reload(true);" class="refresh-details-link">
+                <span class="bcf bcf-icon-refresh"></span>
+                Refresh details</a>
+            </div>
+    </div>
+    <div class="cc-route-header">
+        <div class="container">
+            <div class="col-md-8 padding-left-0">
+                <h3 class="cc-route-header-text">
+                    <a href="/current-conditions-beta/LNG-HSB"><span class="bcf bcf-icon-stacked-arrows-horizontal"></span></a>
+                    Vancouver (Horseshoe Bay) to<br class="br-mobile"><span class="align-cc-header-mobile">  Sunshine Coast (Langdale)<br class="br-mobile"><span class="align-cc-header-mobile"></span>
+                </h3>
+                <!-- SHAWN DHALIWAL: to "not empty" -->
+                <span class="popup" data-toggle="modal" data-target="#serviceNoticesModal">
+                        <a href="#" class="view-service-notices">
+                            <span class="bcf bcf-icon-info-solid"></span>
+                            View service notices</a>
+                    </span>
+                </div>
+            <div class="col-md-4 padding-right-0">
+                <a class="btn btn-primary book-this-route-btn mt-2" href="/?sailing=true&departureLocation=HSB&departureLocationName=West+Vancouver+-+Vancouver+(Horseshoe+Bay)&arrivalLocation=LNG&arrivalLocationName=Langdale+-+Sunshine+Coast+(Langdale)">
+                    <span class="bcf bcf-icon-ticket"></span>Book this route <span class="bcf bcf-icon-right-arrow"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <br>
+        </div>
+</div>
+<!-- END CC BETA HEADER COMPONENT -->
+<div class="container">
+    <div class="col-md-8 col-sm-12 padding-left-0 padding-right-0">
+        <!-- START CC-BETA-SAILING-STATUSES -->
+        <div class="cc-beta-sailing-statuses section2" id="sailing-status">
+
+            <h3 class="text-dark-blue">
+                Sailing Status</h3>
+            <hr>
+            <div class="sailing-statuses-accordion">
+                <h4 class="ui-accordion-header">
+                    Arrived & underway</h4>
+                <div>
+                    <div class="sailing-status">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+            
+                <!-- No text for the default case -->
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">7:30 am</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            Departed
+                        </p>
+                        <p class="status-departure-arrival-time">7:33 am</p>
+                    
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                            
+                                
+                                    <p class="status-info-headers mb-0">
+                                        Arrived
+                                    </p>
+                                    <p class="status-departure-arrival-time">8:11 am</p>
+                                
+                                
+                                
+                            
+                        
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+                            <div class="sailing-status">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+                <p class="status-delayed">
+                    Delayed
+                    <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<p style='color: #D82727; font-weight: bold; font-size: 14px;margin-bottom: 0px;'>
+                        Delayed</p>
+                        
+                            <p style='color: #D82727;margin-top:0px;margin-bottom:0px;'>Earlier loading procedure is causing ongoing delay</p>
+                        
+                        <p class='font-weight-bold' style='margin-top: 10px;'>
+                            If you are booked on a delayed sailing, check in for your scheduled departure time.
+                        </p>
+                        <p>
+                            Customers arriving once loading has begun, may be delayed to the next available sailing.
+                        </p>">
+                        <span class="bcf bcf-icon-notice icon-red"></span>
+                    </a>
+                </p>
+            
+            
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">9:50 am</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            Departed
+                        </p>
+                        <p class="status-departure-arrival-time">10:09 am</p>
+                    
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                            
+                                
+                                    <p class="status-info-headers mb-0">
+                                        Arrived
+                                    </p>
+                                    <p class="status-departure-arrival-time">10:47 am</p>
+                                
+                                
+                                
+                            
+                        
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+                            </div>
+            </div>
+            <hr>
+            <div class="sailing-statuses-accordion" id="sailing-statuses-accordion-default-open">
+                <h4 class="ui-accordion-header open-accordion">
+                    Upcoming</h4>
+                <div>
+                    <div class="sailing-status nowTicketingBox">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+            <p class="nextAvailableSailingHeaderText">
+                Next sailing with vehicle space</p>
+
+
+<p style="font-size: 14px;">Estimated space doesn&#39;t include vehicles outside the terminal waiting to buy a ticket.
+            </p>
+        
+        
+            
+            
+                <p class="status-delayed">
+                    Delayed
+                    <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<p style='color: #D82727; font-weight: bold; font-size: 14px;margin-bottom: 0px;'>
+                        Delayed</p>
+                        
+                            <p style='color: #D82727;margin-top:0px;margin-bottom:0px;'>Earlier loading procedure is causing ongoing delay</p>
+                        
+                        <p class='font-weight-bold' style='margin-top: 10px;'>
+                            If you are booked on a delayed sailing, check in for your scheduled departure time.
+                        </p>
+                        <p>
+                            Customers arriving once loading has begun, may be delayed to the next available sailing.
+                        </p>">
+                        <span class="bcf bcf-icon-notice icon-red"></span>
+                    </a>
+                </p>
+            
+            
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">12:10 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                                <p class="status-departure-arrival-time">
+                                        12:29 pm
+                                </p>
+                            
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                            
+                                
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                            <p class="status-departure-arrival-time">1:09 pm</p>
+                                        
+                                        
+                                    
+                                
+                            
+                        
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <div class="now-ticketing-section">
+            <p style="margin-bottom: 0px;">
+                
+                    
+                        <span class="red-text percentageAvailable">0%</span>
+                        <span class="red-text fnt-16">&nbsp;Available vehicle space</span>
+                    
+                    
+                    
+                
+            </p>
+            <hr style="margin-top: 10px; margin-bottom: 15px; border-color: #ccc;">
+            <div>
+                <div>
+                    <div class="chart-container" data-available-space="0" data-reservations-not-checked-in="14" data-vehicles-checked-in="86">
+                        <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                        <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                        <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                        <div class="visible-xs" style="width: 100%;">
+                            <hr style="margin-top: 10px; margin-bottom: 10px; border-color: #ccc;">
+                            <a class="fnt-14" href="#cc-beta-webcams-section"><span class="bcf bcf-icon-webcam" style="padding-right:5px; position: relative; bottom: 2px; font-size: 18px;"></span>Terminal cameras</a>
+                        </div>
+                        
+                            <div class="vehicle-checkin-times">
+                                <p>Reservation check-in opens: <strong>11:10 AM</strong></p>
+                                <p>Pending space released: <strong>11:40 AM</strong>
+                                    <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                        <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+
+</div>
+                            <div class="sailing-status ">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+                <p class="status-ontime">
+                    On time
+                </p>
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">2:25 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        2:25 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                        
+                            
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                        
+                                            <p class="status-departure-arrival-time">3:05 pm</p>
+                                        
+                                    
+                                
+                            
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        <div class="cc-beta-page-vehicle-space-accordion">
+            <h5 class="ui-accordion-header">
+                
+                    
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">31%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+                <span class="accordion-header-details-text"><span class="cc-beta-Details">Details</span></span>
+            </h5>
+            <div>
+                <div>
+                    <hr style="margin-bottom: 15px; border-color: #ccc;">
+                    
+                        
+                        
+                            <div class="chart-container" data-available-space="31" data-reservations-not-checked-in="55" data-vehicles-checked-in="14">
+                                <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                                <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                                <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                                
+                                    <div class="vehicle-checkin-times">
+                                        <p>Reservation check-in opens: <strong>1:25 PM</strong></p>
+                                        <p>Pending space released: <strong>1:55 PM</strong>
+                                            <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                                <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+                            <div class="sailing-status ">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+                <p class="status-ontime">
+                    On time
+                </p>
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">4:45 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        4:45 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                        
+                            
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                        
+                                            <p class="status-departure-arrival-time">5:25 pm</p>
+                                        
+                                    
+                                
+                            
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        <div class="cc-beta-page-vehicle-space-accordion">
+            <h5 class="ui-accordion-header">
+                
+                    
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">43%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+                <span class="accordion-header-details-text"><span class="cc-beta-Details">Details</span></span>
+            </h5>
+            <div>
+                <div>
+                    <hr style="margin-bottom: 15px; border-color: #ccc;">
+                    
+                        
+                        
+                            <div class="chart-container" data-available-space="43" data-reservations-not-checked-in="57" data-vehicles-checked-in="0">
+                                <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                                <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                                <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                                
+                                    <div class="vehicle-checkin-times">
+                                        <p>Reservation check-in opens: <strong>3:45 PM</strong></p>
+                                        <p>Pending space released: <strong>4:15 PM</strong>
+                                            <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                                <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+                            <div class="sailing-status ">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+                <p class="status-ontime">
+                    On time
+                </p>
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">5:30 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        5:30 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                        
+                            
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                        
+                                            <p class="status-departure-arrival-time">6:10 pm</p>
+                                        
+                                    
+                                
+                            
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/COQ" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Coquitlam</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        <div class="cc-beta-page-vehicle-space-accordion">
+            <h5 class="ui-accordion-header">
+                
+                    
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">100%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+                <span class="accordion-header-details-text"><span class="cc-beta-Details">Details</span></span>
+            </h5>
+            <div>
+                <div>
+                    <hr style="margin-bottom: 15px; border-color: #ccc;">
+                    
+                        
+                        
+                            <div class="chart-container" data-available-space="100" data-reservations-not-checked-in="0" data-vehicles-checked-in="0">
+                                <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                                <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                                <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                                
+                                    <div class="vehicle-checkin-times">
+                                        <p>Reservation check-in opens: <strong>4:30 PM</strong></p>
+                                        <p>Pending space released: <strong>5:00 PM</strong>
+                                            <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                                <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+                            <div class="sailing-status ">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+                <p class="status-ontime">
+                    On time
+                </p>
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">7:05 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        7:05 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                        
+                            
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                        
+                                            <p class="status-departure-arrival-time">7:45 pm</p>
+                                        
+                                    
+                                
+                            
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        <div class="cc-beta-page-vehicle-space-accordion">
+            <h5 class="ui-accordion-header">
+                
+                    
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">45%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+                <span class="accordion-header-details-text"><span class="cc-beta-Details">Details</span></span>
+            </h5>
+            <div>
+                <div>
+                    <hr style="margin-bottom: 15px; border-color: #ccc;">
+                    
+                        
+                        
+                            <div class="chart-container" data-available-space="45" data-reservations-not-checked-in="55" data-vehicles-checked-in="0">
+                                <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                                <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                                <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                                
+                                    <div class="vehicle-checkin-times">
+                                        <p>Reservation check-in opens: <strong>6:05 PM</strong></p>
+                                        <p>Pending space released: <strong>6:35 PM</strong>
+                                            <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                                <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+                            <div class="sailing-status ">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+                <p class="status-ontime">
+                    On time
+                </p>
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">9:25 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        9:25 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                        
+                            
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                        
+                                            <p class="status-departure-arrival-time">10:05 pm</p>
+                                        
+                                    
+                                
+                            
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        <div class="cc-beta-page-vehicle-space-accordion">
+            <h5 class="ui-accordion-header">
+                
+                    
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">58%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+                <span class="accordion-header-details-text"><span class="cc-beta-Details">Details</span></span>
+            </h5>
+            <div>
+                <div>
+                    <hr style="margin-bottom: 15px; border-color: #ccc;">
+                    
+                        
+                        
+                            <div class="chart-container" data-available-space="58" data-reservations-not-checked-in="42" data-vehicles-checked-in="0">
+                                <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                                <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                                <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                                
+                                    <div class="vehicle-checkin-times">
+                                        <p>Reservation check-in opens: <strong>8:25 PM</strong></p>
+                                        <p>Pending space released: <strong>8:55 PM</strong>
+                                            <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                                <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+                            <div class="sailing-status ">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+            
+            
+            
+                <p class="status-ontime">
+                    On time
+                </p>
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">11:30 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        11:30 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+                <div class="info">
+                    
+                        
+                        
+                        
+                            
+                                
+                                
+                                    <p class="status-info-headers mb-0">
+                                        ETA
+                                    </p>
+                                    
+                                        
+                                        
+                                            <p class="status-departure-arrival-time">12:10 am</p>
+                                        
+                                    
+                                
+                            
+                        
+                    
+                </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+        <div class="cc-beta-page-vehicle-space-accordion">
+            <h5 class="ui-accordion-header">
+                
+                    
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">86%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+                <span class="accordion-header-details-text"><span class="cc-beta-Details">Details</span></span>
+            </h5>
+            <div>
+                <div>
+                    <hr style="margin-bottom: 15px; border-color: #ccc;">
+                    
+                        
+                        
+                            <div class="chart-container" data-available-space="86" data-reservations-not-checked-in="14" data-vehicles-checked-in="0">
+                                <canvas class="vehicleSpaceDoughnutChart" width="67" height="67"></canvas>
+                                <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon logo"></span>
+                                <div class="vehicleSpaceDoughnutChartCustomLegend"></div>
+                                
+                                    <div class="vehicle-checkin-times">
+                                        <p>Reservation check-in opens: <strong>10:30 PM</strong></p>
+                                        <p>Pending space released: <strong>11:00 PM</strong>
+                                            <a href="javascript:;" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" title="" class="popoverThis" data-content="<strong>Additional vehicle space usually becomes available after check-in closes.</strong><br />
+<br />
+During regular operations, 10-20% of reservations are not redeemed. After check-in closes, this pending space is released to standby vehicles at the terminal.<br />
+<br />
+<strong>Check-in closed: </strong>30 minutes before scheduled sailing departure">
+                                                <span class="bcf bcf-icon-notice fnt-18" style="color: white;"></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    
+
+</div>
+                            </div>
+            </div>
+            <hr>
+            <div class="sailing-statuses-accordion" id="sailing-statuses-tomorrow-accordion">
+                <h4 class="ui-accordion-header" style="border-top: none;">
+                    Tomorrow</h4>
+                <div>
+                    <div class="sailing-status">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+                <p class="status-tomorrow">
+                    Tomorrow
+                </p>
+            
+            
+            
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">7:30 am</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        7:30 am
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        <div class="tomorrow-space-details">
+            <p style="margin-bottom: 0px;">
+                
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">44%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+            </p>
+        </div>
+    
+    
+
+</div>
+                    <div class="sailing-status">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+                <p class="status-tomorrow">
+                    Tomorrow
+                </p>
+            
+            
+            
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">9:50 am</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        9:50 am
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        <div class="tomorrow-space-details">
+            <p style="margin-bottom: 0px;">
+                
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">44%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+            </p>
+        </div>
+    
+    
+
+</div>
+                    <div class="sailing-status">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sailing-status-details">
+    <div class="status">
+        
+        
+            
+                <p class="status-tomorrow">
+                    Tomorrow
+                </p>
+            
+            
+            
+            
+            
+        
+    </div>
+    <div class="status-info">
+        <div class="status-schedule-info">
+            <p class="mb-0 status-info-headers">
+                Scheduled
+            </p>
+            <p class="status-schedule-time">12:10 pm</p>
+        </div>
+
+        <div class="status-departure-arrival-info">
+            <div class="info">
+                
+                    
+                    
+                    
+                        <p class="status-info-headers mb-0">
+                            ETD
+                        </p>
+                        
+                            
+                            
+                                <p class="status-departure-arrival-time">
+                                        12:10 pm
+                                </p>
+                            
+                        
+                    
+                
+            </div>
+            
+        </div>
+        <div class="vessel-name">
+            <a href="/ship-info/SUR" class="sailing-ferry-name cc-beta-ferry-name"
+               data-toggle="modal" data-target="#detailsModal">
+                <p>Queen of Surrey</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        <div class="tomorrow-space-details">
+            <p style="margin-bottom: 0px;">
+                
+                    
+                    
+                    
+                        <span class="accordion-header-percent-available green-text">44%</span>
+                        <span class="green-text">&nbsp;Available vehicle space</span>
+                    
+                
+            </p>
+        </div>
+    
+    
+
+</div>
+                    </div>
+            </div>
+            <hr>
+
+        </div>
+        <div class="modal fade" id="serviceNoticesModal" tabindex="-2" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content cc-beta-service-notices-modal">
+                    <div class="modal-header">
+                        <span class="bcf bcf-icon-notice-outline bcf-2x"></span>&nbsp;
+                        SERVICES NOTICES<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <hr style="margin-bottom: 0px; border-top: 1px solid #ccc;">
+                    </div>
+                    <div class="modal-body cc-service-notices-modal">
+                        <div class="cc-beta-page-service-notice-accordion">
+                            <h5 class="ui-accordion-header border-top-none">
+                                    <a href="/current-conditions/service-notices?serviceNoticeCode=8802745429768" target="_blank">Langdale Life Extension - February 10 to May 31, 2025</a>
+                                </h5>
+                                <div>
+                                        <p>Updated: Wednesday, April 23, 2025</p>
+
+<p style="text-align: center;"><span style="font-size:18px;"><strong>Berth 2 Life Extension</strong></span><br />
+<span style="font-size:16px;"><strong>Langdale (Sunshine Coast) Terminal</strong></span><br />
+<span style="font-size:16px;">February 10 to May 31, 2025</span></p>
+
+<p>As part of our ongoing commitment to ensure the safe operation of our terminal facilities, we started carrying out marine construction activities to Berth 2 at the Langdale terminal. The project began on February 10 and is expected to continue until May 31.</p>
+
+<p>Construction is planned Monday to Saturday, 7:00 am to 5:00 pm. A minor portion of the work must be completed during low tides outside regular working hours. Noise levels around the terminal may be more noticeable than normal, and our teams will work to minimize the impact for both our customers and neighbours.</p>
+
+<p>We do not expect any impacts to terminal operations and will continue to update this Service Notice should there be any changes to this scheduled project.</p>
+
+<p>Thank you to our customers and neighbours for your patience and understanding as we complete this required work.</p>
+
+<p>For up-to-date sailing and departure information, check&nbsp;<a href="https://www.bcferries.com/current-conditions">Current Conditions</a>, follow&nbsp;<a href="https://x.com/BCFerries">@BCFerries</a>&nbsp;on X or phone 1-888-223-3779 for further assistance.</p>
+</div>
+                            <h5 class="ui-accordion-header ">
+                                    <a href="/current-conditions/service-notices?serviceNoticeCode=8802647420680" target="_blank">Horseshoe Bay Transfer Deck Life Extension Project - November 2024 to May 2025</a>
+                                </h5>
+                                <div>
+                                        <p>Reposted: Sunday, December 29, 2024</p>
+
+<p style="text-align: center;"><span style="font-size:18px;"><strong>Horseshoe Bay Terminal (Vancouver)&nbsp;<br />
+Transfer Deck Life Extension</strong></span><br />
+<span style="font-size:18px;">November 25 to May 2025</span></p>
+
+<p>As part of our ongoing commitment to ensure the safe operation of our terminal facilities, necessary work to extend the life of the transfer deck at Horseshoe Bay terminal began Monday, November 25 and is expected to be completed May 2025.</p>
+
+<p>To ensure timely completion and to minimize impacts to service, night work will be required and is expected to take place Monday through Friday, excluding statutory holidays, between 9:00 pm and 5:00 am.</p>
+
+<p>Construction activities, including concrete chipping and patching, will take place and noise levels around the terminal may be more noticeable than normal. Our teams will work to minimize the impact for both our customers and neighbours.</p>
+
+<p>This Service Notice will be updated should there be any changes to this scheduled work.</p>
+
+<p>We thank our customers and neighbours for their patience and understanding as we complete this necessary project.</p>
+
+<p>For up-to-date sailing and departure information, check <a href="https://www.bcferries.com/current-conditions">Current Conditions</a>, follow <a href="https://x.com/BCFerries">@BCFerries</a> on X or phone 1-888-223-3779 for further assistance.</p>
+</div>
+                            <hr style=" margin-top: 0px;width: 99%; border-top: 1px solid #ccc;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden-xs hidden-sm">
+            <div class="padding-left-0">
+                <h3 class="text-dark-blue">Other resources</h3>
+                <div class="row information-div margin-bottom-20 padding-top-20">
+
+                    
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon"></span>
+        <a href="/current-conditions/departures?terminalCode=HSB"
+            ><span class="cc-beta-OR-Departures-Arrivals">Departures and arrivals</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="blue-color bcf bcf-icon-fare-price bcf-2x schedules-icons"></span>
+        <a href="/routes-fares/fare-calculator?departureLocation=HSB&arrivalLocation=LNG&scheduleDate=05%2f22%2f2025"
+            ><span class="cc-beta-OR-Calculate-Fare">Calculate fare</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="blue-color bcf bcf-icon-time bcf-2x schedules-icons"></span>
+        <a href="/routes-fares/schedules/daily/HSB-LNG"
+            ><span class="cc-beta-OR-Go-to-Schedule">Go to schedule</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="blue-color bcf bcf-icon-email bcf-2x schedules-icons"></span>
+        <a href="/my-account/subscriptions"
+            ><span class="cc-beta-OR-Route-Notices">Sign up for route notices</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12 padding-left-0 padding-right-0">
+        <div class="cc-beta-webcams-section section4" id="cc-beta-webcams-section">
+                <h3 class="text-dark-blue webcams-header">
+                    Terminal cameras</h3>
+                <p>
+                    Use our terminal cameras to check traffic and weather conditions at the terminal.</p>
+                <i class="cc-last-update-text">
+                    <p class="text-center font-italic mt-3 mb-3">
+                            Last updated:<span style="padding-left: 5px;">11:27 AM</span>
+                            <a href="#" onclick="window.location.reload(true);">
+                                &nbsp;Refresh</a>
+                        </p>
+                    </i>
+                <div class="col-md-12 col-sm-6 padding-left-0 padding-right-0 text-center">
+                    <img class="webcam-img" src="https://ccimg.bcferries.com/cc/support/terminals/cam1_HSB.jpg"/>
+                    <p class="text-center mt-2 mb-3">
+                        Traffic at the terminal</p>
+                </div>
+                <div class="col-md-12 col-sm-6 padding-left-0 padding-right-0 text-center">
+                    <img class="webcam-img" src="https://ccimg.bcferries.com/cc/support/terminals/cam3_HSB.jpg"/>
+                    <p class="text-center mt-2 mb-3">
+                        Traffic to Sunshine Coast (Langdale)</p>
+                </div>
+                <div class="col-xs-12 padding-left-0 padding-right-0">
+                    <hr style="border-top: 1px solid #ccc;">
+                </div>
+            </div>
+        <div class="cc-beta-ferry-tracking-section section5" id="cc-beta-ferry-tracking-section">
+                <h3 class="text-dark-blue ferry-tracking-header">
+                    Ferry tracking</h3>
+                <p>
+                    See where our ferries are right now and watch them navigate coastal BC with our tracking maps.</p>
+                <hr>
+                <div id="ferry-tracking-accordion">
+                    <h4 class="ui-accordion-header">
+                        Vancouver (Horseshoe Bay) to <br>Sunshine Coast (Langdale)</h4>
+                    <div>
+                        <div class="margin-bottom-0">
+                    <span class="popup" data-toggle="modal" data-target="#ferryTrackingModal">
+                        <div>
+                            <img class="cc-beta-ferry-tracking-map" width="700px" height="333px" src="https://ccimg.bcferries.com/cc/support/vessels/route4.jpg" />
+                        </div>
+                    </span>
+                            <div class="modal fade" id="ferryTrackingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            FERRY TRACKING<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5>
+                                                Vancouver (Horseshoe Bay) to Sunshine Coast (Langdale)</h5>
+                                            <div class="iframeContainer">
+                                                <iframe width="500px" height="670px" src="https://ccimg.bcferries.com/cc/support/vessels/route4.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+        <div class="cc-beta-terminal-info section6" id="terminal-info">
+                <h3 class="text-dark-blue terminal-info-header"><span class="cc-beta-Terminal-Info">Terminal info &amp; parking</span></h3>
+                <strong>Vancouver (Horseshoe Bay)</strong>
+                <p># 6750 Keith Rd , West Vancouver, V7W 2V1</p>
+                <div class="information-div" style="margin-bottom: 10px;">
+                    
+
+
+
+
+
+
+
+
+
+
+<div class="full-wdth">
+    <div class="m-info">
+        <span class="bcf bcf-icon-terminal-details bcf-vertical-middle bcf-icon-sm bcf-bule-icon"></span>
+        <a href="/travel-boarding/terminal-directions-parking-food/vancouver-horseshoe-bay/HSB"
+            ><span class="cc-beta-Terminal-Info">Terminal info &amp; parking</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+</div>
+                <div class="information-div" style="margin-bottom: 10px;">
+                    
+
+
+
+
+
+
+
+
+
+
+<div class="full-wdth">
+    <div class="m-info">
+        <span class="bcf bcf-icon-location bcf-vertical-middle bcf-icon-sm bcf-bule-icon"></span>
+        <a href="https://goo.gl/maps/dgST292Tuxkk9xwf8"
+            ><span class="cc-beta-Get-Directions">Get directions</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+</div>
+                <div class="information-div">
+                    <span class="popup" data-toggle="modal" data-target="#parkingAvailabilityModal">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="full-wdth">
+    <div class="m-info">
+        <span class="bcf bcf-icon-parking bcf-vertical-middle bcf-icon-sm bcf-bule-icon"></span>
+        <a href="#"
+            ><span class="cc-beta-Parking-Available">Parking: 60% available</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+</span>
+                </div>
+                <hr style="border-top: 1px solid #ccc;">
+            </div>
+            <div class="modal fade" id="parkingAvailabilityModal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content cc-beta-service-notices-modal">
+                        <div class="modal-header">
+                            <h4 class="text-dark-blue" style="display:inline;"> Parking at Vancouver (Horseshoe Bay)</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body cc-service-notices-modal" >
+                                <p style="font-weight: bold;">&nbsp;</p>
+
+<p style="font-weight: bold;">Parking at Horseshoe Bay terminal is independently operated and managed by <a href="https://www.impark.com/" target="_blank">Impark</a>.</p>
+
+<p><strong>Capacity:</strong> 598 spaces&nbsp;<br />
+Short term: 138<br />
+Long term: 460</p>
+
+<p><strong>Payment options:&nbsp;</strong>Visa, Mastercard and American Express.</p>
+
+<ul>
+	<li>Meters - Pay by License Plate Number in Long Term and Pay by License Plate Number in Short Term</li>
+	<li><a href="https://www.paybyphone.com/" target="_blank">PayByPhone</a>&nbsp;App- Pay by License Plate Number in Long Term and Pay by License Plate Number in Short Term</li>
+	<li><a href="https://www.hangtag.io/" target="_blank">hangTag</a>&nbsp;App- Pay by License Plate Number in Long Term and Short Term</li>
+</ul>
+
+<p><strong>Parking info and rates:</strong> Meters require exact change or credit card payment.</p>
+
+<p><strong>Short term lot &ndash; Licence Plate Number is required to purchase parking. No need to display ticket on dash.</strong></p>
+
+<p><strong>Lot codes/names and parking operations:</strong><br />
+Meter - 1621 (Pay by Licence Plate)<br />
+<a href="https://www.paybyphone.com/" target="_blank">PayByPhone</a> - 1621 (Pay by Licence Plate)<br />
+<a href="https://www.hangtag.io/" target="_blank">hangTag</a> - HSB&nbsp;Long &amp; Short Term offers Scan to Pay &amp; Text to Pay (Pay by Licence Plate)</p>
+
+<p><br />
+<strong>Rates:</strong></p>
+
+<ul>
+	<li>$1.00 for 15 minutes, maximum 2 hours</li>
+	<li>$4.00 for 1 hour</li>
+	<li>$30.00 for each 24 hour period&nbsp;</li>
+	<li>Multiple day parking allowed</li>
+</ul>
+
+<p><strong>Long term lot &ndash; License Plate Number&nbsp;is required to purchase parking. No need to display ticket on dash.</strong></p>
+
+<p><strong>Lot codes/names and parking operations:</strong><br />
+Meter - 1621 (Pay by License Plate Number)<br />
+<a href="https://www.paybyphone.com/" target="_blank">PayByPhone</a> - 1748 (Pay by License Plate Number)<br />
+<a href="https://www.hangtag.io/" target="_blank">hangTag</a> - HSB Long Term (Pay by License Plate)</p>
+
+<p><strong>Rates:</strong></p>
+
+<ul>
+	<li>$14.00 for 6 hours</li>
+	<li>$25.00&nbsp;for each 24 hours</li>
+	<li>$12.50 each additional 12 hour period after the first 24 hours</li>
+	<li>Monthly passes available. Contact <a href="https://www.impark.com/" target="_blank">Impark</a> for availability and rates.</li>
+</ul>
+
+<p><strong>Note:</strong></p>
+
+<ul>
+	<li>If paying by credit card on meter, enter your mobile phone number to receive a text notifying you that your parking is about to expire. You can then follow the text instructions (reply within 5 mins of receiving the text) to extend your parking up to 24 hours.</li>
+	<li>You can also pay or extend (start new parking session) your parking without signing up for the <a href="https://www.paybyphone.com/" target="_blank">PayByPhone</a> app. Visit <a href="https://m2.paybyphone.com/parking" target="_blank">PayByPhone.com</a>, continue as a guest and follow the instructions (a new parking session will start). Your stall number will be required for long term parking and licence plate number for short term parking.</li>
+	<li>Cash acceptance</li>
+</ul>
+
+<p>Meters accept coins only - no change given.<br />
+One meter accepts bills/coins and is located in long term lot. For long term parking only.</p>
+
+<p><strong>Parking is not permitted in the aisles. Vehicles will be ticketed and/or towed.</strong></p>
+
+<p><br />
+<strong>Parking host: </strong><br />
+Parking host is available occasionally (7 days/week from 7am - 9pm) for assistance at 778-838-9272.</p>
+
+<p><br />
+<strong>Towing: </strong><br />
+Mitchell&#39;s Towing<br />
+604-982-0115</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-xs-12 visible-sm-block visible-xs-block padding-left-0 padding-right-0">
+        <div class="padding-left-0 other-resources" id="other-resources">
+            <h3 class="text-dark-blue">Other resources</h3>
+            <div class="row information-div margin-bottom-20 padding-top-20">
+
+                
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="bcf bcf-icon-ferry bcf-vertical-middle bcf-icon-sm bcf-bule-icon"></span>
+        <a href="/current-conditions/departures?terminalCode=HSB"
+            ><span class="cc-beta-OR-Departures-Arrivals">Departures and arrivals</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="blue-color bcf bcf-icon-fare-price bcf-2x schedules-icons"></span>
+        <a href="/routes-fares/fare-calculator?departureLocation=HSB&arrivalLocation=LNG&scheduleDate=05%2f22%2f2025"
+            ><span class="cc-beta-OR-Calculate-Fare">Calculate fare</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="blue-color bcf bcf-icon-time bcf-2x schedules-icons"></span>
+        <a href="/routes-fares/schedules/daily/HSB-LNG"
+            ><span class="cc-beta-OR-Go-to-Schedule">Go to schedule</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-6 col-sm-6 col-xs-12  img-icon-width">
+    <div class="m-info">
+        <span class="blue-color bcf bcf-icon-email bcf-2x schedules-icons"></span>
+        <a href="/my-account/subscriptions"
+            ><span class="cc-beta-OR-Route-Notices">Sign up for route notices</span><i class="far bcf bcf-icon-right-arrow"></i></a>
+    </div>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+    <div class="yCmsContentSlot">
+
+       <div>
+          <footer>
+    <div class="container">
+    <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pull-right footer-m">
+                    <div class="footer-title"><em>onBoard</em> eNewsletter</div><ul class="list-unstyled" style="padding-bottom: 8px;"><li><a href="/deals-special-offers/onboard-enewsletter">Sign up for email offers</a></li></ul><div class="footer-title" style="margin-bottom:-2px">BC Ferries app</div><a href="https://play.google.com/store/apps/details?id=com.bcferries" target="_blank"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="height:55px; margin:0 -10px 0 -8px" /></a> <a href="https://apps.apple.com/us/app/bc-ferries/id6444454630" target="_blank"><img alt="Download on the App Store" src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1678406400" style="border-radius: 6px; width: 111px; height: 37px;"><ul class="list-unstyled" style="padding-bottom:5px;"><li><a href="/app">Learn more</a></li></ul><div class="footer-title" style="margin-bottom:-2px">Connect on social media</div><ul class="list-inline" style="padding-top: 10px; margin-bottom: 40px;"> 	<li><a href="https://www.facebook.com/BCFerries/" target="_blank"><i aria-hidden="true" class="fab fa-2x fa-facebook-f">&nbsp;</i></a></li> 	<li><a href="https://twitter.com/bcferries" target="_blank"><i aria-hidden="true" class="bcf bcf-icon-twitter" style="font-size: 24px; margin-top: -6px;">&ZeroWidthSpace;</i></a></li> 	 	<li><a href="https://www.linkedin.com/company/25762/" target="_blank"><i aria-hidden="true" class="fab fa-2x fa-linkedin-in">&nbsp;</i></a></li> 	<li><a href="https://instagram.com/bcferries/" target="_blank"><i aria-hidden="true" class="fab fa-2x fa-instagram">&nbsp;</i></a></li> 	<li><a href="https://www.youtube.com/c/bcferries" target="_blank"><i aria-hidden="true" class="fab fa-2x fa-youtube">&nbsp;</i></a></li> </ul></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-m">
+                    <div class="footer-title">Our company</div>
+                    <ul class="list-unstyled">
+                        <li><a href="/our-company" >About us</a></li>
+                        <li><a href="/our-company/leadership" >Leadership & governance</a></li>
+                        <li><a href="/our-company/indigenous-relations" >Indigenous relations</a></li>
+                        <li><a href="/our-company/investor-relations" >Investor relations</a></li>
+                        <li><a href="/our-company/freedom-of-information" >Freedom of information</a></li>
+                        <li><a href="/our-company/procurement" >Procurement</a></li>
+                        <li><a href="/our-company/bc-ferries-jobs" >Careers</a></li>
+                        </ul>
+                </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-m">
+                    <div class="footer-title">Our community</div>
+                    <ul class="list-unstyled">
+                        <li><a href="/community-engagement" >Community engagement</a></li>
+                        <li><a href="/in-the-community/community-social-investment" >Community & social investment</a></li>
+                        <li><a href="/in-the-community/resources" >Policies, reports & plans</a></li>
+                        </ul>
+                </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-m">
+                    <div class="footer-title">Contact us</div>
+                    <ul class="list-unstyled">
+                        <li><a href="/contact-us" >General contact &amp; customer service</a></li>
+                        <li><a href="/contact-us/helping-you-during-a-service-disruption" >Service disruptions</a></li>
+                        <li><a href="/contact-us/media-room" ><span class="tracking-media-room">Media room</span></a></li>
+                        <li><a href="/contact-us/property-or-injury" >Property damage or injury claims</a></li>
+                        <li><a href="/contact-us/baggage" >Missing or damaged baggage</a></li>
+                        <li><a href="/contact-us/scam-alerts" >Scam alerts</a></li>
+                        <li><a href="/contact-us/ferry-vessel-chartering" >Charter a ferry</a></li>
+                        <li><a href="/contact-us/film-production-request" >Film production request</a></li>
+                        </ul>
+                </div>
+            </div>
+
+
+
+		<div class="row">
+          <div class="additional-links">
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                        <ul class="footer-bottom-links">
+                            <li><a href="/sitemap" >Sitemap</a></li>
+                            <li><a href="/terms-and-conditions" >Terms & conditions</a></li>
+                            <li><a href="/privacy-statement" >Privacy statement</a></li>
+                            <li><a href="/travel-policies" >Travel policies</a></li>
+                            <li><a href="/accessibility" >Accessibility</a></li>
+                            <li><a href="/employee-login" >Employee login</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+                        Copyright © 2025 British Columbia Ferry Services Inc.</div>
+                </div>
+                </div>
+
+
+    </div>
+</footer>
+
+       </div>
+    </div>
+
+</main>
+	<form name="accessiblityForm" class="hidden">
+		<input type="hidden" id="accesibility_refreshScreenReaderBufferField" name="accesibility_refreshScreenReaderBufferField" value=""/>
+	</form>
+	<div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text" aria-live="polite"></div>
+
+	<span class="d-none" id="password.strength.veryweak">Very weak</span>
+<span class="d-none" id="password.strength.weak">Weak</span>
+<span class="d-none" id="password.strength.medium">Medium</span>
+<span class="d-none" id="password.strength.strong">Strong</span>
+<span class="d-none" id="password.strength.verystrong">Very strong</span>
+<span class="d-none" id="password.strength.unsafepwd">password.strength.unsafepwd</span>
+<span class="d-none" id="password.strength.tooshortpwd">Too short</span>
+<span class="d-none" id="password.strength.minchartext">Use %d - %m characters with a mix of any 3 [upper case letters, lower case letters, numbers & symbols]</span>
+<span class="d-none" id="password.strength.minchar">8</span>
+<span class="d-none" id="password.strength.maxchar">32</span>
+<span class="d-none" id="password.minchar.validation.msg">Password must be more than eight characters and contain a mix of any three of the following: upper case letters, numbers and symbols.</span>
+<span class="d-none" id="password.maxchar.validation.msg">Password must be less than 32 characters and contain a mix of any three of the following: upper case letters, numbers and symbols.</span>
+<span class="d-none" id="password.empty.validation.msg">Enter current password</span>
+<span class="d-none" id="email.validation.msg">Enter valid email address</span>
+<span class="d-none" id="password.validation.msg">Password not valid</span>
+<span class="d-none" id="register.accountType.invalid">Select account type</span>
+<span class="d-none" id="register.firstName.invalid">Enter first name</span>
+<span class="d-none" id="register.lastName.invalid">Enter last name</span>
+<span class="d-none" id="confirmEmail.validation.msg">Confirm Email Not Valid</span>
+<span class="d-none" id="password.pattern.validation.msg">Password must be more than eight characters and contain a mix of any three of the following: upper case letters, numbers and symbols.</span>
+<span class="d-none" id="reconfirm.password.validation.msg">Passwords do not match</span>
+<span class="d-none" id="postcode.pattern.validation.msg">Enter valid postal/zip code</span>
+<span class="d-none" id="aria.pickupinstore.loading">Loading... Please wait...</span>
+<span class="d-none" id="aria.pickupinstore.storesloaded">Stores loaded</span>
+<span class="d-none" id="text.schedule.view.schedule.from.label">View schedule from</span>
+<span class="d-none" id="text.cc.view.sailingStatus.from.label">View sailing status from</span>
+<span class="d-none" id="text.discover.routes.from.label">Discover our routes from</span>
+<span class="d-none" id="text.view.schedule.to.label">to</span>
+<script type="text/javascript">
+		/*<![CDATA[*/
+		
+		var ACC = { config: {} };
+			ACC.config.contextPath = "";
+			ACC.config.encodedContextPath = "";
+			ACC.config.commonResourcePath = "/_ui/responsive/common";
+			ACC.config.themeResourcePath = "/_ui/responsive/theme-bcf";
+			ACC.config.siteResourcePath = "/_ui/responsive/site-bcferries";
+			ACC.config.rootPath = "/_ui/responsive";
+			ACC.config.CSRFToken = "c36f2d4a-d77b-43ab-83aa-cb260384c3a9";
+			ACC.pwdStrengthVeryWeak = document.getElementById("password.strength.veryweak").innerText;
+			ACC.pwdStrengthWeak = document.getElementById("password.strength.weak").innerText;
+			ACC.pwdStrengthMedium =  document.getElementById("password.strength.medium").innerText;
+			ACC.pwdStrengthStrong = document.getElementById("password.strength.strong").innerText
+			ACC.pwdStrengthVeryStrong = document.getElementById("password.strength.verystrong").innerText;
+			ACC.pwdStrengthUnsafePwd = document.getElementById("password.strength.unsafepwd").innerText;
+			ACC.pwdStrengthTooShortPwd = document.getElementById("password.strength.tooshortpwd").innerText;
+			ACC.pwdStrengthMinCharText = document.getElementById("password.strength.minchartext").innerText;
+			ACC.pwdStrengthMinChar = document.getElementById("password.strength.minchar").innerText;
+			ACC.pwdStrengthMaxChar =  document.getElementById("password.strength.maxchar").innerText;
+			ACC.pwdMinCharValidationMsg = document.getElementById("password.minchar.validation.msg").innerText;
+			ACC.pwdMaxCharValidationMsg = document.getElementById("password.maxchar.validation.msg").innerText;
+			ACC.pwdEmptyValidationMsg = document.getElementById("password.empty.validation.msg").innerText;
+			ACC.emailValidationMsg = document.getElementById("email.validation.msg").innerText;
+			ACC.passwordValidationMsg = document.getElementById("password.validation.msg").innerText;
+			ACC.accountTypeValidationMsg = document.getElementById("register.accountType.invalid").innerText;
+			ACC.firstNameValidationMsg = document.getElementById("register.firstName.invalid").innerText;
+			ACC.lastNameValidationMsg = document.getElementById("register.lastName.invalid").innerText;
+		    ACC.confirmEmailValidationMsg = document.getElementById("confirmEmail.validation.msg").innerText;
+			ACC.pwdPatternValidationMsg = document.getElementById("password.pattern.validation.msg").innerText;
+			ACC.reconfirmPasswordValidationMsg = document.getElementById("reconfirm.password.validation.msg").innerText;
+	        ACC.postCodePatternValidationMsg = document.getElementById("postcode.pattern.validation.msg").innerText;
+			ACC.accessibilityLoading = document.getElementById("aria.pickupinstore.loading").innerText;
+			ACC.accessibilityStoresLoaded = document.getElementById("aria.pickupinstore.storesloaded").innerText;
+			ACC.config.googleApiKey="";
+			ACC.config.googleApiVersion="3.7";
+
+			
+			ACC.autocompleteUrl = '/search/autocompleteSecure';
+
+			
+			ACC.config.loginUrl = '/login';
+
+			
+			ACC.config.authenticationStatusUrl = '/authentication/status';
+			ACC.viewScheduleFrom = document.getElementById("text.schedule.view.schedule.from.label").innerText;
+			ACC.viewSailingStatusFrom = document.getElementById("text.cc.view.sailingStatus.from.label").innerText;
+			ACC.viewDiscoverRoutesFrom = document.getElementById("text.discover.routes.from.label").innerText;
+			ACC.viewScheduleTo = document.getElementById("text.view.schedule.to.label").innerText;
+
+			
+		/*]]>*/
+	</script>
+	<script type="text/javascript">
+	/*<![CDATA[*/
+	ACC.addons = {};	//JS holder for addons properties
+			
+	
+		ACC.addons.bcfcheckoutaddon = [];
+		
+		ACC.addons.bcfstorefrontaddon = [];
+		
+		ACC.addons.bcfvoyageaddon = [];
+		
+		ACC.addons.bcfassistedservicesstorefront = [];
+		
+		ACC.addons.smarteditaddon = [];
+		
+		ACC.addons.bcfaccommodationsaddon = [];
+		
+		ACC.addons.bcfcommonsaddon = [];
+		
+	/*]]>*/
+</script>
+<script type="text/javascript" src="/_ui/responsive/common/../js/jsLibrary.min.js"></script>
+      <script type="text/javascript" src="/_ui/responsive/common/../js/common.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+
+	$('.js-main-box .add-on-box:nth-child(3)').addClass("accordion-arriv");
+	$(function() {
+		$("#accordion-review").accordion();
+		$("#accordion-review").accordion({
+			header : "h4",
+			collapsible : true,
+			active : false
+		});
+	});
+	$(function() {
+		$(".accordion-arriv #accordion-review").accordion();
+		$(".accordion-arriv #accordion-review").accordion({
+			header : "h4",
+			collapsible : true,
+			active : false
+		});
+	});
+	 $( "#tabs" ).tabs();
+});
+
+// Jquery Loader
+$(document).ready(function() {
+  $('.js_form_submit').on('submit', function(event) {
+    event.preventDefault();
+    $('#mtmLC').show();
+    $.ajax({
+      type: $(this).attr('method'),
+      url: $(this).attr('action'),
+      data: $(this).serialize(),
+      success: function(response) {
+        var tempElement = $('<div>').html(response);
+        var redirectUrl = tempElement.find('link[rel="canonical"]').attr('href');
+        window.location.href = redirectUrl;
+      },
+      error: function(error) {
+        console.error('Error:', error);
+      }
+    });
+  });
+});
+
+
+// configuration for datatable starts here
+
+$(document).ready(function() {
+
+// custom logic to sort dates. Dates should be in format 'dd/MM/YYYY hh:mm:ss'
+
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "date-euro-pre": function ( a ) {
+            var x;
+
+            if ( $.trim(a) !== '' ) {
+                var frDatea = $.trim(a).split(' ');
+                var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00,00,00];
+                var frDatea2 = frDatea[0].split('/');
+                x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + ((undefined != frTimea[2]) ? frTimea[2] : 0)) * 1;
+            }
+            else {
+                x = Infinity;
+            }
+
+            return x;
+        },
+
+        "date-euro-asc": function ( a, b ) {
+            return a - b;
+        },
+
+        "date-euro-desc": function ( a, b ) {
+            return b - a;
+        }
+    } );
+
+//initialize pending(on-request) orders datatable -->
+
+    $('#pendingOrdersContentList').DataTable({
+     "order": [[ 3, "desc" ]],
+     "columnDefs": [
+     {
+         "targets": [ 7 ],
+         "searchable": false,
+         "orderable": false
+     },
+      {
+          "targets": [ 8 ],
+          "searchable": false,
+          "orderable": false
+      }
+      ],
+      "lengthMenu": [[5,10, 25, 50, -1], [5,10, 25, 50, "All"]],
+      "aoColumns": [
+           null,
+           null,
+           null,
+           { "sType": "date-euro" },
+           null,
+           { "sType": "date-euro" },
+           null
+      ]
+       });
+
+// initialize booking Inquiry data table
+		$('#js-schedule-table').DataTable({
+			"paging":   false,
+			"info":     false,
+			"searching": false
+
+		});
+		$('.js-data-table').DataTable({
+			"paging":   true,
+			"info":     false,
+			"searching": true,
+			"columnDefs": [
+			    { "width": "20%", "targets": "_all" }
+			  ]
+
+		});
+        $('#bookingInquiryContentList').DataTable({
+             "order": [[ 4, "desc" ]],
+             "columnDefs": [
+             {
+                 "targets": [ 7 ],
+                 "searchable": false,
+                 "orderable": false
+             },
+              {
+                  "targets": [ 8 ],
+                  "searchable": false,
+                  "orderable": false
+              }
+              ],
+              "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+              "aoColumns": [
+                   null,
+                   null,
+                   null,
+                   null,
+                   { "sType": "date-euro" },
+                   { "sType": "date-euro" },
+                   null,
+                   null,
+                   null,
+                   null
+              ]
+        });
+//booking Inquiry data table configuratons end
+
+} );
+// configuration for datatable ends here
+
+$(document).ready(function() {
+			if ($(window).width() >= 980) {
+						$("#js_navbar_menu .dropdown-toggle").click(function() {
+							if ($(".orbeon").length > 0) {
+								$(this).parent().toggleClass("open");
+							}
+						});
+					}
+
+			$(window).resize(function() {
+				if ($(window).width() >= 980) {
+					$("#js_navbar_menu .dropdown-toggle").click(function() {
+						if ($(".orbeon").length > 0) {
+							$(this).parent().toggleClass("open");
+						}
+						});
+					}
+
+					});
+			 $(window).click(function(e){
+				if ($('.tab-depart').hasClass("active")) {
+					$('.depart-calendar').addClass("active");
+					$('.return-calendar').removeClass("active");
+				}
+
+			});
+			$(window).click(function(e){
+				if ($('.tab-return').hasClass("active")) {
+					$('.return-calendar').addClass("active");
+					$('.depart-calendar').removeClass("active");
+				}
+
+			});
+		  	$('#vacation-accordion2').on('click', function(e) {
+		  	    var target = $(this);
+		  	    $('html, body').animate({
+		  	        scrollTop: target.offset().top
+		  	    }, 500);
+		  	});
+
+			// document ready
+		});
+	</script>
+
+</body>
+
+</html>

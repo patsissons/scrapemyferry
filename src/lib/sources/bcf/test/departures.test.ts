@@ -1,4 +1,3 @@
-import dayjs from 'dayjs'
 import { departures } from '../departures'
 import fixture from './fixtures/current-conditions/departures.json'
 

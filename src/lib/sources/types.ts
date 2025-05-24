@@ -113,9 +113,75 @@ export interface SourceConfig {
 export interface Source {
   config: SourceConfig
   currentConditions(from: string, to: string): Promise<CurrentConditions>
+  currentConditionsBeta(
+    from: string,
+    to: string,
+  ): Promise<CurrentConditionsBeta>
   dailySchedule(from: string, to: string, date?: string): Promise<DailySchedule>
   departures(from: string): Promise<Departures>
   routes(): Promise<Routes>
   sailing(from: string, to: string, departureTime: string): Promise<Sailing>
   seasonalSchedule(from: string, to: string): Promise<SeasonalSchedule>
+}
+
+export interface CurrentConditionsBeta {
+  url: string
+  lastUpdated: string
+  links: {
+    booking: string
+    departuresArrivals: string
+    calculateFare: string
+    schedule: string
+    trackingMap: string
+  }
+  arrivedUnderway: {
+    scheduled: string
+    departed: string
+    arrived: string
+    vessel: {
+      name: string
+      url: string
+    }
+    status: {
+      delayed: boolean
+    }
+  }[]
+  upcoming: {
+    nextAvailable: boolean
+    scheduled: string
+    etd: string
+    eta: string
+    vessel: {
+      name: string
+      url: string
+    }
+    status: {
+      delayed: boolean
+    }
+    availableSpace: number
+    notCheckedIn: number
+    checkedIn: number
+    checkinOpensAt: string
+    spaceReleasedAt: string
+  }[]
+  tomorrow: {
+    scheduled: string
+    etd: string
+    vessel: {
+      name: string
+      url: string
+    }
+    availableSpace: number
+  }[]
+  cameras: {
+    lastUpdated: string
+    webcams: {
+      url: string
+      label: string
+    }[]
+  }
+  terminal: {
+    name: string
+    address: string
+  }
 }

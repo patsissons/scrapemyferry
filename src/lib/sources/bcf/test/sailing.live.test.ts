@@ -1,4 +1,6 @@
 import { sailing } from '../sailing'
+import { currentConditions } from '../currentConditions'
+import { parseTime } from '../utils'
 
 describe('Sailing', () => {
   // this is necessary for jest to not complain about an empty test suite
@@ -8,7 +10,9 @@ describe('Sailing', () => {
     process.env.LIVE_TESTS,
     'LIVE test',
     async () => {
-      const result = await sailing('HSB', 'LNG', '14:10')
+      const { nextSailing } = await currentConditions('HSB', 'LNG')
+      const time = parseTime(nextSailing.scheduled)
+      const result = await sailing('HSB', 'LNG', time)
 
       expect(result).toBeDefined()
       expect(result.url).toBeDefined()

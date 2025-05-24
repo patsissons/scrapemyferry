@@ -1,6 +1,6 @@
 {
   "name": "scrapemyferry",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Scapes your ferry data.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,9 +14,9 @@
     "dev": "tsx src/cli.ts",
     "start": "node dist/cli.js",
     "test": "jest",
-    "test:live": "LIVE_TESTS=true jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:live": "LIVE_TESTS=true pnpm test",
+    "test:watch": "pnpm test -- --watch",
+    "test:coverage": "pnpm test -- --coverage"
   },
   "keywords": [],
   "author": "",

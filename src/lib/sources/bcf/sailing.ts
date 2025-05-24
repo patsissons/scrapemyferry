@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 import scrapeIt from 'scrape-it'
 import type { Sailing } from '../types'
 import { availabilityUrl } from './urls'
-import { buildTimestamp } from './utils'
+import { buildTimestamp, parsePercentage, parseTime } from './utils'
 import { tz } from './config'
 
 interface SailingData {
@@ -21,7 +21,7 @@ export function sailing(
   departureDate?: string,
 ) {
   const departTimestamp = buildTimestamp(departureTime, departureDate)
-  const url = availabilityUrl(from, to, departTimestamp.toISOString())
+  const url = availabilityUrl(from, to, departTimestamp)
 
   return scrapeIt<SailingData>(url, {
     body: {
@@ -56,12 +56,11 @@ export function sailing(
       totalSpace,
       standardSpace,
       mixedSpace,
-    ].map((space) => parseInt(space.replace('%', '')) / 100)
+    ].map(parsePercentage)
+    const [datePart] = departTimestamp.split(' ')
     const isotime = dayjs(
-      departTimestamp.format('YYYY-MM-DD') +
-        ' ' +
-        dayjs(time, 'h:mma').format('HH:mm:ss'),
-      'YYYY-MM-DD HH:mm:ss',
+      [datePart, parseTime(time)].join(' '),
+      'YYYY-MM-DD HH:mm',
       true,
     )
       .tz(tz)
